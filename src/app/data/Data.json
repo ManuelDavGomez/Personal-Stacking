@@ -1,24 +1,112 @@
 [
   {
     "id": 1,
-    "name": "Example Project",
-    "type": "Web Application",
+    "name": "React",
+    "type": "Biblioteca",
     "language": "JavaScript",
-    "website": "https://example.com",
-    "description": "An example project to demonstrate the data structure.",
-    "usecases": ["Demonstration", "Example"],
-    "createdAt": "2023-01-01",
-    "lastUpdated": "2023-01-02"
+    "website": "https://reactjs.org",
+    "description": "Biblioteca para construir interfaces de usuario interactivas.",
+    "usecases": ["Frontend", "SPA"],
+    "createdAt": "2013-05-29",
+    "lastUpdated": "2024-12-15"
   },
-    {
-    "id": 1,
-    "name": "Project 2",
-    "type": "Web Application",
+  {
+    "id": 2,
+    "name": "Vue.js",
+    "type": "Framework",
     "language": "JavaScript",
-    "website": "https://example.com",
-    "description": "An example project to demonstrate the data structure.",
-    "usecases": ["Demonstration", "Example"],
-    "createdAt": "2023-01-01",
-    "lastUpdated": "2023-01-02"
+    "website": "https://vuejs.org",
+    "description": "Framework progresivo para construir interfaces de usuario.",
+    "usecases": ["Frontend", "Componentes"],
+    "createdAt": "2014-02-01",
+    "lastUpdated": "2024-11-21"
+  },
+  {
+    "id": 3,
+    "name": "Django",
+    "type": "Framework",
+    "language": "Python",
+    "website": "https://www.djangoproject.com",
+    "description": "Framework de alto nivel que promueve el desarrollo rápido y limpio.",
+    "usecases": ["Backend", "Web"],
+    "createdAt": "2005-07-15",
+    "lastUpdated": "2024-09-10"
+  },
+  {
+    "id": 4,
+    "name": "Tailwind CSS",
+    "type": "Framework",
+    "language": "CSS",
+    "website": "https://tailwindcss.com",
+    "description": "Framework de utilidad para construir interfaces personalizadas.",
+    "usecases": ["Estilos", "UI"],
+    "createdAt": "2017-11-01",
+    "lastUpdated": "2025-01-03"
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "type": "Entorno de ejecución",
+    "language": "JavaScript",
+    "website": "https://nodejs.org",
+    "description": "Entorno para ejecutar JavaScript en el servidor.",
+    "usecases": ["Backend", "APIs"],
+    "createdAt": "2009-05-27",
+    "lastUpdated": "2024-10-05"
+  },
+  {
+    "id": 6,
+    "name": "Express",
+    "type": "Framework",
+    "language": "JavaScript",
+    "website": "https://expressjs.com",
+    "description": "Framework minimalista para aplicaciones web en Node.js.",
+    "usecases": ["Backend", "REST APIs"],
+    "createdAt": "2010-11-16",
+    "lastUpdated": "2024-11-30"
+  },
+  {
+    "id": 7,
+    "name": "MongoDB",
+    "type": "Base de datos",
+    "language": "C++",
+    "website": "https://mongodb.com",
+    "description": "Base de datos NoSQL orientada a documentos.",
+    "usecases": ["Almacenamiento", "NoSQL"],
+    "createdAt": "2009-02-11",
+    "lastUpdated": "2024-12-22"
+  },
+  {
+    "id": 8,
+    "name": "Next.js",
+    "type": "Framework",
+    "language": "JavaScript",
+    "website": "https://nextjs.org",
+    "description": "Framework de React para renderizado del lado del servidor y generación de sitios estáticos.",
+    "usecases": ["SSR", "SSG", "Fullstack"],
+    "createdAt": "2016-10-25",
+    "lastUpdated": "2025-01-05"
+  },
+  {
+    "id": 9,
+    "name": "Bootstrap",
+    "type": "Framework",
+    "language": "CSS",
+    "website": "https://getbootstrap.com",
+    "description": "Framework popular para diseñar sitios web responsivos.",
+    "usecases": ["Estilos", "Diseño Web"],
+    "createdAt": "2011-08-19",
+    "lastUpdated": "2024-08-12"
+  },
+  {
+    "id": 10,
+    "name": "PostgreSQL",
+    "type": "Base de datos",
+    "language": "C",
+    "website": "https://www.postgresql.org",
+    "description": "Sistema de base de datos relacional de código abierto.",
+    "usecases": ["Relacional", "Consultas SQL"],
+    "createdAt": "1996-07-08",
+    "lastUpdated": "2024-12-01"
   }
 ]

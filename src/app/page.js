@@ -18,7 +18,7 @@ export default function Home() {
         />
       </section>
       <PagesLayout>
-        <section className="flex flex-row flex-center items-center gap-10 my-30">
+        <section className="flex flex-row flex-center items-center gap-10 my-30 mysection">
           <section>
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
