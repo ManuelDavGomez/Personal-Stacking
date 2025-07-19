@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Example Project",
+    "type": "Web Application",
+    "language": "JavaScript",
+    "website": "https://example.com",
+    "description": "An example project to demonstrate the data structure.",
+    "usecases": ["Demonstration", "Example"],
+    "createdAt": "2023-01-01",
+    "lastUpdated": "2023-01-02"
+  },
+    {
+    "id": 1,
+    "name": "Project 2",
+    "type": "Web Application",
+    "language": "JavaScript",
+    "website": "https://example.com",
+    "description": "An example project to demonstrate the data structure.",
+    "usecases": ["Demonstration", "Example"],
+    "createdAt": "2023-01-01",
+    "lastUpdated": "2023-01-02"
+  }
+]
