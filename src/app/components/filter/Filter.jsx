@@ -16,8 +16,12 @@ const Filter = () => {
   });
 
   const [repos, setRepos] = useState([]);
-
   const [resultados, setResultados] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(10);
+
+  const showMore = () => {
+    setVisibleCount((prev) => prev + 10);
+  };
 
   useEffect(() => {
     const filtrados = Tech.filter((item) => {
@@ -94,7 +98,7 @@ const Filter = () => {
         </section>
 
         <ul className="flex items-center justify-center gap-5 flex-wrap">
-          {resultados.map((item, index) => (
+          {resultados.slice(0, visibleCount).map((item, index) => (
             <a
               href={item.website}
               target="_blank"
@@ -104,10 +108,10 @@ const Filter = () => {
             >
               <li
                 key={index}
-                className="h-80 w-[300px] flex items-start flex-col justify-center p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300"
+                className="h-90 w-[300px] flex items-start flex-col justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300"
               >
                 <h3>{item.name}</h3>
-                <p>{item.description}</p>
+                <p className="mt-3">{item.description}</p>
                 <section className="flex items-center gap-3 mt-5">
                   <h4>Tipo: </h4>
                   <p>{item.type}</p>
@@ -145,7 +149,16 @@ const Filter = () => {
           ))}
         </ul>
 
-        <hr className="my-20 overflow-hidden border-[#202944]"/>
+        {visibleCount < resultados.length && (
+          <button
+            onClick={showMore}
+            className="mt-10 mx-auto block cursor-pointer px-4 py-2 bg-[#08080c73] border border-[#202944] text-white rounded-lg hover:bg-[#1b31573d] transition-colors duration-300"
+          >
+            Ver mas
+          </button>
+        )}
+
+        <hr className="my-20 overflow-hidden border-[#202944]" />
 
         <section className="flex flex-col items-center justify-center mt-20">
           <h2 className="mb-10">Repositorios Populares</h2>

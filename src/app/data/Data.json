@@ -110,5 +110,155 @@
     "usecases": ["Relacional", "Consultas SQL"],
     "createdAt": "1996-07-08",
     "lastUpdated": "2024-12-01"
+  },
+  {
+    "id": 11,
+    "name": "Flask",
+    "type": "Framework",
+    "language": "Python",
+    "website": "https://flask.org",
+    "description": "American whole magazine truth stop whose group through despite cause cause.",
+    "usecases": [
+      "APIs",
+      "Web"
+    ],
+    "stars": "42.4k",
+    "createdAt": "2018-09-08",
+    "lastUpdated": "2025-05-20"
+  },
+  {
+    "id": 12,
+    "name": "GraphQL",
+    "type": "Lenguaje de consulta",
+    "language": "JavaScript",
+    "website": "https://graphql.org",
+    "description": "Would mouth relate own chair better available sure form.",
+    "usecases": [
+      "APIs",
+      "Consultas"
+    ],
+    "stars": "150.3k",
+    "createdAt": "2008-10-21",
+    "lastUpdated": "2025-03-27"
+  },
+  {
+    "id": 13,
+    "name": "Electron",
+    "type": "Framework",
+    "language": "JavaScript",
+    "website": "https://electron.org",
+    "description": "First policy daughter need kind miss artist truth trouble behavior style.",
+    "usecases": [
+      "Escritorio",
+      "Frontend"
+    ],
+    "stars": "42.4k",
+    "createdAt": "2009-01-02",
+    "lastUpdated": "2024-12-14"
+  },
+  {
+    "id": 14,
+    "name": "Spring Boot",
+    "type": "Framework",
+    "language": "Java",
+    "website": "https://springboot.org",
+    "description": "Country cost party prevent live bed serious theory.",
+    "usecases": [
+      "Backend",
+      "Microservicios"
+    ],
+    "stars": "156.2k",
+    "createdAt": "2013-10-25",
+    "lastUpdated": "2024-11-19"
+  },
+  {
+    "id": 15,
+    "name": "Laravel",
+    "type": "Framework",
+    "language": "PHP",
+    "website": "https://laravel.org",
+    "description": "Together type music hospital relate every speech.",
+    "usecases": [
+      "Backend",
+      "Web"
+    ],
+    "stars": "233.8k",
+    "createdAt": "2006-11-23",
+    "lastUpdated": "2025-06-22"
+  },
+  {
+    "id": 16,
+    "name": "Nuxt.js",
+    "type": "Framework",
+    "language": "JavaScript",
+    "website": "https://nuxt.js.org",
+    "description": "Stay information every manage political record word group food break onto friend couple.",
+    "usecases": [
+      "SSR",
+      "Frontend"
+    ],
+    "stars": "237.8k",
+    "createdAt": "2012-11-25",
+    "lastUpdated": "2025-07-12"
+  },
+  {
+    "id": 17,
+    "name": "Svelte 11",
+    "type": "Framework",
+    "language": "JavaScript",
+    "website": "https://svelte11.org",
+    "description": "Article level others record hospital employee toward like.",
+    "usecases": [
+      "Frontend",
+      "SPA"
+    ],
+    "stars": "110.9k",
+    "createdAt": "2017-07-01",
+    "lastUpdated": "2025-01-15"
+  },
+  {
+    "id": 18,
+    "name": "Angular 12",
+    "type": "Framework",
+    "language": "TypeScript",
+    "website": "https://angular12.org",
+    "description": "Whom around put suddenly garden economy others kind.",
+    "usecases": [
+      "Frontend",
+      "SPA"
+    ],
+    "stars": "232.9k",
+    "createdAt": "2011-05-06",
+    "lastUpdated": "2025-04-26"
+  },
+  {
+    "id": 19,
+    "name": "Redis 18",
+    "type": "Base de datos",
+    "language": "C",
+    "website": "https://redis18.org",
+    "description": "Study candidate address wear individual about add.",
+    "usecases": [
+      "Cache",
+      "Mensajería"
+    ],
+    "stars": "260.9k",
+    "createdAt": "2011-12-23",
+    "lastUpdated": "2025-02-28"
+  },
+  {
+    "id": 20,
+    "name": "MySQL 21",
+    "type": "Base de datos",
+    "language": "C++",
+    "website": "https://mysql21.org",
+    "description": "Travel among see red pretty Republican total policy head Mrs debate onto across.",
+    "usecases": [
+      "Relacional",
+      "SQL"
+    ],
+    "stars": "275.0k",
+    "createdAt": "2016-04-15",
+    "lastUpdated": "2024-12-19"
   }
 ]
