@@ -13,16 +13,16 @@ const Nav = () => {
         <div class="wrapper">
           <ul>
             <li>
-              <a href="/">Inicio</a>
+              <a href="/">INICIO</a>
             </li>
             <li>
-              <a href="/pages/builder">Constructor</a>
+              <a href="/pages/builder">CONSTRUCTOR</a>
             </li>
             <li>
-              <a href="/pages/library">Biblioteca</a>
+              <a href="/pages/library">BIBLIOTECA</a>
             </li>
             <li>
-              <a href="/pages/acercade">Acerca</a>
+              <a href="/pages/acercade">ACERCA</a>
             </li>
           </ul>
         </div>

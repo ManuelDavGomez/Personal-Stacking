@@ -7,6 +7,7 @@
     "website": "https://reactjs.org",
     "description": "Biblioteca para construir interfaces de usuario interactivas.",
     "usecases": ["Frontend", "SPA"],
+    "stars":"237.6k",
     "createdAt": "2013-05-29",
     "lastUpdated": "2024-12-15"
   },
@@ -18,6 +19,7 @@
     "website": "https://vuejs.org",
     "description": "Framework progresivo para construir interfaces de usuario.",
     "usecases": ["Frontend", "Componentes"],
+    "stars":"51.5k",
     "createdAt": "2014-02-01",
     "lastUpdated": "2024-11-21"
   },
