@@ -1,40 +1,69 @@
+// app/page.tsx o un componente client
 "use client";
 
-import React from "react";
+import { useState } from "react";
+import techData from "../../data/TechData.json";
+import PagesLayout from "../../pagesLayout.jsx";
 
-const stack = {
-  frontend: {
-    framework: "Vike",
-    uiFramework: "React",
-    css: ["TailwindCSS", "Compiled"],
-    uiComponents: ["shadcn/ui", "daisyUI"],
-  },
-  data: {
-    auth: ["Auth.js", "Auth0"],
-    dataFetching: ["Telefunc", "tRPC", "ts-rest"],
-    server: ["Hono", "Express"],
-    database: ["Drizzle", "SQLite", "Prisma"],
-  },
-  deployment: {
-    hosting: ["Vercel", "Netlify", "AWS", "Cloudflare"],
-  },
-  utilities: {
-    linter: ["ESLint", "Prettier", "Biome"],
-    analytics: ["Plausible.io", "Google Analytics", "Segment"],
-    errorTracking: ["Sentry", "Logrocket"],
-  },
-  meta: {
-    projectName: "my-web-app",
-    preset: "Next.js",
-    typescript: true,
-    cms: null,
-    dateCreated: "2025-07-27T20:00:00Z",
-  },
-};
+export default function Page() {
+  const [name, setName] = useState("");
+  const [techDataechList, setTechList] = useState([]);
 
+  const handleAddTech = (e) => {
+    e.preventDefault();
 
-const page = () => {
-  return <div>page</div>;
-};
+    const newTech = {
+      name,
+    };
 
-export default page;
+    setName("");
+  };
+
+  setTechList([...techList, newTech]);
+
+  return (
+    <PagesLayout>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold mb-4">Tecnologías disponibles</h1>
+
+        <main className="p-8">
+          <h1 className="text-2xl font-bold mb-6">Agregar Tecnología</h1>
+
+          <form onSubmit={handleAddTech} className="space-y-4 mb-8">
+            <input
+              type="text"
+              placeholder="Nombre"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="border p-2 w-full"
+              required
+            />
+          
+            <button
+              type="submit"
+              className="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Agregar
+            </button>
+          </form>
+
+          <h2 className="text-xl font-semibold mb-4">Lista de Tecnologías</h2>
+          {techList.length === 0 ? (
+            <p className="text-gray-500">
+              Aún no has agregado ninguna tecnología.
+            </p>
+          ) : (
+            <div className="space-y-4">
+              {techList.map((tech, index) => (
+                <div key={index} className="border p-4 rounded bg-gray-100">
+                  <h3 className="font-bold">{tech.name}</h3>
+                
+                </div>
+              ))}
+            </div>
+          )}
+        </main>
+      </div>
+    </PagesLayout>
+  );
+}

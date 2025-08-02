@@ -11,20 +11,13 @@ const Faq = () => {
           <input type="checkbox" id="accordion1" />
           <label for="accordion1" class="accordion-item-title">
             <span class="icon"></span>
-            <p>
-              ¿Cuánto tiempo debería descansar si sufro una lesión durante la
-              práctica de calistenia?
-            </p>
+            <p>¿Qué es el Constructor de Stacks?</p>
           </label>
           <article class="accordion-item-desc">
             <p>
-              El tiempo de recuperación varía según la gravedad de la lesión. Si
-              experimentas una lesión leve, como un esguince o una distensión
-              muscular, es posible que solo necesites unos días de descanso
-              seguidos de una reintroducción gradual al entrenamiento. Sin
-              embargo, para lesiones más graves, como fracturas o desgarros
-              musculares, es importante buscar atención médica y seguir las
-              recomendaciones del profesional de la salud.
+              Es una herramienta interactiva que te permite armar tu propio
+              stack tecnológico eligiendo lenguajes, frameworks, bases de datos,
+              herramientas de despliegue, y más.
             </p>
           </article>
         </section>
@@ -33,14 +26,60 @@ const Faq = () => {
           <input type="checkbox" id="accordion2" />
           <label for="accordion2" class="accordion-item-title">
             <span class="icon"></span>
-            <p>¿Cual es el Objetivo de RouteSthenics?</p>
+            <p>¿Qué tecnologías puedo incluir en mi stack?</p>
           </label>
           <article class="accordion-item-desc">
             <p>
-              Este sitio se ha creado con el propósito de invitar a personas
-              comunes al maravilloso mundo de la calistenia, ofreciendo una
-              visión clara y accesible sobre cómo progresar desde ejercicios
-              básicos hasta los más desafiantes.
+              Puedes elegir entre tecnologías frontend (React, Vue, Next.js...),
+              backend (Node.js, Django, Express...), bases de datos (MongoDB,
+              PostgreSQL...), herramientas de CI/CD, testing, y alojamiento en
+              la nube.
+            </p>
+          </article>
+        </section>
+
+        <section class="accordion-item">
+          <input type="checkbox" id="accordion3" />
+          <label for="accordion3" class="accordion-item-title">
+            <span class="icon"></span>
+            <p>¿Para quién está pensado este constructor?</p>
+          </label>
+          <article class="accordion-item-desc">
+            <p>
+              Está pensado para desarrolladores de todos los niveles:
+              principiantes que buscan entender cómo se compone un stack
+              moderno, y expertos que quieren comparar o mostrar sus tecnologías
+              favoritas.
+            </p>
+          </article>
+        </section>
+
+        <section class="accordion-item">
+          <input type="checkbox" id="accordion4" />
+          <label for="accordion4" class="accordion-item-title">
+            <span class="icon"></span>
+            <p>¿El stack que elijo funciona realmente?</p>
+          </label>
+          <article class="accordion-item-desc">
+            <p>
+              El constructor está diseñado para combinar tecnologías compatibles
+              entre sí, pero siempre es recomendable validar los detalles
+              técnicos de integración para proyectos reales.
+            </p>
+          </article>
+        </section>
+
+        <section class="accordion-item">
+          <input type="checkbox" id="accordion5" />
+          <label for="accordion5" class="accordion-item-title">
+            <span class="icon"></span>
+            <p>¿Planean agregar más tecnologías?</p>
+          </label>
+          <article class="accordion-item-desc">
+            <p>
+              ¡Sí! Nuestro equipo está constantemente actualizando la base de
+              datos con nuevas herramientas populares o emergentes en el
+              ecosistema tecnológico.
             </p>
           </article>
         </section>
