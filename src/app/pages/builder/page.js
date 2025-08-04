@@ -6,63 +6,67 @@ import techData from "../../data/TechData.json";
 import PagesLayout from "../../pagesLayout.jsx";
 
 export default function Page() {
-  const [name, setName] = useState("");
-  const [techDataechList, setTechList] = useState([]);
+  const [selectedText, setSelectedText] = useState("npm");
 
-  const handleAddTech = (e) => {
-    e.preventDefault();
+  // const [addedOptions, setAddedOptions] = useState([]);
 
-    const newTech = {
-      name,
-    };
+  const options = [
+    { label: "npm", value: "npm" },
+    { label: "pnpm", value: "pnpm" },
+    { label: "yarn", value: "yarn" },
+    { label: "bun", value: "bun" },
+  ];
 
-    setName("");
+  // const handleAddOption = (value) => {
+  //   if (!addedOptions.includes(value)) {
+  //     setAddedOptions([...addedOptions, value]);
+  //   }
+  // };
+
+  const handleClick = (value) => {
+    setSelectedText(value);
   };
-
-  setTechList([...techList, newTech]);
 
   return (
     <PagesLayout>
       <div className="p-8">
         <h1 className="text-2xl font-bold mb-4">Tecnologías disponibles</h1>
 
-        <main className="p-8">
-          <h1 className="text-2xl font-bold mb-6">Agregar Tecnología</h1>
+        <main>
+          <div className="mb-4 bg-black text-white p-4 rounded">
+            <code>{selectedText} create vite@latest --- </code>
+          </div>
 
-          <form onSubmit={handleAddTech} className="space-y-4 mb-8">
-            <input
-              type="text"
-              placeholder="Nombre"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="border p-2 w-full"
-              required
-            />
-          
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-4 py-2 rounded"
-            >
-              Agregar
-            </button>
-          </form>
-
-          <h2 className="text-xl font-semibold mb-4">Lista de Tecnologías</h2>
-          {techList.length === 0 ? (
-            <p className="text-gray-500">
-              Aún no has agregado ninguna tecnología.
-            </p>
-          ) : (
-            <div className="space-y-4">
-              {techList.map((tech, index) => (
-                <div key={index} className="border p-4 rounded bg-gray-100">
-                  <h3 className="font-bold">{tech.name}</h3>
-                
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="flex flex-wrap gap-2">
+            {options.map((opt, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleClick(opt.value)}
+                className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-800 transition"
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
         </main>
+
+        {/* <main className="p-10">
+          <div className="mb-4 bg-black text-white p-4 rounded">
+            <code>{`${selectedText} ${addedOptions.join(" ")}`}</code>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {options.map((opt, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleAddOption(opt.value)}
+                className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-800 transition"
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </main> */}
       </div>
     </PagesLayout>
   );

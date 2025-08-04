@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "React",
-    "description": "A JavaScript library for building user interfaces",
-    "code":"npm i react"
+
+    "code": "npm i react"
   },
   {
     "id": 2,
     "name": "Node.js",
-    "description": "JavaScript runtime built on Chrome's V8 engine",
-"code":"npm i react"
+
+    "code": "npm i react"
   },
   {
     "id": 3,
     "name": "Express",
-    "description": "Fast, unopinionated, minimalist web framework for Node.js",
-   "code":"npm i react"
+
+    "code": "npm i react"
   }
 ]
