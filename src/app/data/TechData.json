@@ -1,20 +1,43 @@
-[
-  {
-    "id": 1,
-    "name": "React",
+{
+  "frontend": {
+    "Frameworks": [
+      {
+        "name": "React"
+      },
+      {
+        "name": "Vue.js"
+      },
+      {
+        "name": "Angular"
+      }
+    ],
+    "Preprocessors": [
+      {
+        "name": "Sass"
+      },
+      {
+        "name": "Less"
+      }
+    ],
+    "Soporte Animaciones": [
+      {
+        "name": "GSAP"
+      },
+      {
+        "name": "Anime.js"
+      }
+    ],
+    "UI Frameworks": [
+      {
+        "name": "Material-UI"
+      },
+      {
+        "name": "Ant Design"
+      },
+      {
+        "name": "Bootstrap"
+      }
+    ]
 
-    "code": "npm i react"
-  },
-  {
-    "id": 2,
-    "name": "Node.js",
-
-    "code": "npm i react"
-  },
-  {
-    "id": 3,
-    "name": "Express",
-
-    "code": "npm i react"
   }
-]
+}

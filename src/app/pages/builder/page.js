@@ -3,13 +3,14 @@
 
 import { useState } from "react";
 import techData from "../../data/TechData.json";
-import PagesLayout from "../../pagesLayout.jsx";
 
 export default function Page() {
+  const frontendCategories = techData.frontend;
+
   const [selectedText, setSelectedText] = useState("npm");
   const [copiado, setCopiado] = useState(false);
 
-  const [addOpt, setAddOpt] = useState([]);
+  const [selectedOptions, setSelectedOptions] = useState({});
 
   const options = [
     { label: "npm", value: "npm" },
@@ -18,10 +19,11 @@ export default function Page() {
     { label: "bun", value: "bun" },
   ];
 
-  const handleAddOption = (value) => {
-    if (!addOpt.includes(value)) {
-      setAddOpt(value);
-    }
+  const handleSelect = (category, value) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [category]: value, // solo cambia esa categoría
+    }));
   };
 
   const handleClick = (value) => {
@@ -30,8 +32,10 @@ export default function Page() {
 
   const copiar = async () => {
     try {
+      const all = Object.values(selectedOptions).join(" ");
+
       await navigator.clipboard.writeText(
-        `${selectedText} create vite@latest ---  ${addOpt}`
+        `${selectedText} create vite@latest ---  ${all}`
       );
       setCopiado(true);
       setTimeout(() => setCopiado(false), 2000);
@@ -81,8 +85,9 @@ export default function Page() {
                 onClick={copiar}
                 className="my-4 bg-[#08080c73] border border-[#202944] text-white p-3 rounded w-[100%] flex justify-between items-center cursor-pointer"
               >
-                <code>
-                  {selectedText} create vite@latest --- {addOpt}{" "}
+                <code className="text-stone-800">
+                  {selectedText} create vite@latest ---{" "}
+                  {Object.values(selectedOptions).join(" ")}
                 </code>
 
                 {copiado && (
@@ -92,40 +97,39 @@ export default function Page() {
                 )}
               </section>
             </article>
-            <section>
-              {techData.map((tech) => {
-                return (
-                  <>
-                    <button
-                      key={tech.name}
-                      onClick={() => handleAddOption(tech.name)}
-                      className="ml-2 bg-[#08080c73] border border-[#202944] text-gray-400 px-3 py-1 rounded hover:bg-[#1b31573d] hover:text-white transition cursor-pointer"
-                    >
-                      {tech.name}
-                    </button>
-                  </>
-                );
-              })}
-            </section>
+
+            <article className="flex w-full flex-row gap-5 mt-10 p-10 border border-cyan-950 justify-center items-center">
+              <section className="flex border border-amber-400 justify-center flex-col items-start flex-wrap gap-2 p-5 w-[50%]">
+                <h2 className="font-bold">Frontend</h2>
+                {Object.entries(frontendCategories).map(
+                  ([categoryName, items]) => (
+                    <section key={categoryName}>
+                      <h3 className="font-bold my-3 !text-gray-600">
+                        {categoryName}
+                      </h3>
+                      <section className="flex gap-2 flex-wrap">
+                        {items.map((item, i) => (
+                          <button
+                            key={i}
+                            onClick={() =>
+                              handleSelect(categoryName, item.name)
+                            }
+                            className={`px-3 py-1 rounded border cursor-pointer ${
+                              selectedOptions[categoryName] === item.name
+                                ? "bg-blue-500 text-white"
+                                : "bg-gray-700 text-gray-300"
+                            }`}
+                          >
+                            {item.name}
+                          </button>
+                        ))}
+                      </section>
+                    </section>
+                  )
+                )}
+              </section>
+            </article>
           </article>
-
-          {/* <main className="p-10">
-          <div className="mb-4 bg-black text-white p-4 rounded">
-            <code>{`${selectedText} ${addOpt.join(" ")}`}</code>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {options.map((opt, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleAddOption(opt.value)}
-                className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-800 transition"
-              >
-                {opt.label}
-              </button>
-            ))}
-          </div>
-        </main>  */}
         </section>
       </section>
     </>
