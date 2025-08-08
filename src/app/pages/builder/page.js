@@ -9,7 +9,7 @@ export default function Page() {
   const [selectedText, setSelectedText] = useState("npm");
   const [copiado, setCopiado] = useState(false);
 
-  // const [addedOptions, setAddedOptions] = useState([]);
+  const [addOpt, setAddOpt] = useState([]);
 
   const options = [
     { label: "npm", value: "npm" },
@@ -18,11 +18,11 @@ export default function Page() {
     { label: "bun", value: "bun" },
   ];
 
-  // const handleAddOption = (value) => {
-  //   if (!addedOptions.includes(value)) {
-  //     setAddedOptions([...addedOptions, value]);
-  //   }
-  // };
+  const handleAddOption = (value) => {
+    if (!addOpt.includes(value)) {
+      setAddOpt(value);
+    }
+  };
 
   const handleClick = (value) => {
     setSelectedText(value);
@@ -31,7 +31,7 @@ export default function Page() {
   const copiar = async () => {
     try {
       await navigator.clipboard.writeText(
-        `${selectedText} create vite@latest --- `
+        `${selectedText} create vite@latest ---  ${addOpt}`
       );
       setCopiado(true);
       setTimeout(() => setCopiado(false), 2000);
@@ -81,7 +81,9 @@ export default function Page() {
                 onClick={copiar}
                 className="my-4 bg-[#08080c73] border border-[#202944] text-white p-3 rounded w-[100%] flex justify-between items-center cursor-pointer"
               >
-                <code>{selectedText} create vite@latest --- </code>
+                <code>
+                  {selectedText} create vite@latest --- {addOpt}{" "}
+                </code>
 
                 {copiado && (
                   <span className=" top-2 right-3 text-sm text-green-400">
@@ -90,11 +92,26 @@ export default function Page() {
                 )}
               </section>
             </article>
+            <section>
+              {techData.map((tech) => {
+                return (
+                  <>
+                    <button
+                      key={tech.name}
+                      onClick={() => handleAddOption(tech.name)}
+                      className="ml-2 bg-[#08080c73] border border-[#202944] text-gray-400 px-3 py-1 rounded hover:bg-[#1b31573d] hover:text-white transition cursor-pointer"
+                    >
+                      {tech.name}
+                    </button>
+                  </>
+                );
+              })}
+            </section>
           </article>
 
           {/* <main className="p-10">
           <div className="mb-4 bg-black text-white p-4 rounded">
-            <code>{`${selectedText} ${addedOptions.join(" ")}`}</code>
+            <code>{`${selectedText} ${addOpt.join(" ")}`}</code>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -108,7 +125,7 @@ export default function Page() {
               </button>
             ))}
           </div>
-        </main> */}
+        </main>  */}
         </section>
       </section>
     </>
