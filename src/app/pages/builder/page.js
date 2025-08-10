@@ -3,9 +3,11 @@
 
 import { useState } from "react";
 import techData from "../../data/TechData.json";
+import Image from "next/image";
 
 export default function Page() {
   const frontendCategories = techData.frontend;
+  const backendCategories = techData.backend;
 
   const [selectedText, setSelectedText] = useState("npm");
   const [copiado, setCopiado] = useState(false);
@@ -19,10 +21,10 @@ export default function Page() {
     { label: "bun", value: "bun" },
   ];
 
-  const handleSelect = (category, value) => {
+  const handleSelect = (section,category, value) => {
     setSelectedOptions((prev) => ({
       ...prev,
-      [category]: value, // solo cambia esa categoría
+       [`${section}-${category}`]: value, // solo cambia esa categoría
     }));
   };
 
@@ -85,7 +87,7 @@ export default function Page() {
                 onClick={copiar}
                 className="my-4 bg-[#08080c73] border border-[#202944] text-white p-3 rounded w-[100%] flex justify-between items-center cursor-pointer"
               >
-                <code className="text-stone-800">
+                <code>
                   {selectedText} create vite@latest ---{" "}
                   {Object.values(selectedOptions).join(" ")}
                 </code>
@@ -98,28 +100,77 @@ export default function Page() {
               </section>
             </article>
 
-            <article className="flex w-full flex-row gap-5 mt-10 p-10 border border-cyan-950 justify-center items-center">
-              <section className="flex border border-amber-400 justify-center flex-col items-start flex-wrap gap-2 p-5 w-[50%]">
-                <h2 className="font-bold">Frontend</h2>
+            <article className="flex w-full flex-row gap-5 mt-10 p-10 border border-[#202944] justify-center items-start">
+              {/* ahuevo */}
+              <section className="flex justify-center flex-col items-start flex-wrap gap-2 p-5 w-[50%]">
+                <h2 className="font-bold mb-3">Frontend</h2>
+                 <hr className="w-full border-t border-[#202944] mb-3" />
                 {Object.entries(frontendCategories).map(
                   ([categoryName, items]) => (
                     <section key={categoryName}>
                       <h3 className="font-bold my-3 !text-gray-600">
                         {categoryName}
                       </h3>
+
                       <section className="flex gap-2 flex-wrap">
                         {items.map((item, i) => (
                           <button
                             key={i}
                             onClick={() =>
-                              handleSelect(categoryName, item.name)
+                              handleSelect("frontend",categoryName, item.name)
                             }
-                            className={`px-3 py-1 rounded border cursor-pointer ${
+                            className={`px-2 hover:bg-[#1b31573d] hover:border-[#1B3157] flex items-center gap-1 py-1 rounded border cursor-pointer ${
                               selectedOptions[categoryName] === item.name
-                                ? "bg-blue-500 text-white"
-                                : "bg-gray-700 text-gray-300"
+                                ? "bg-[#1b31573d] text-white"
+                                : "bg-[#08080c73] border border-[#202944] text-gray-300"
                             }`}
                           >
+                            <Image
+                              src={item.icon}
+                              alt={item.name}
+                              width={15}
+                              height={15}
+                            />
+                            {item.name}
+                          </button>
+                        ))}
+                      </section>
+                    </section>
+                  )
+                )}
+              </section>
+
+              {/* ---- */}
+
+              <section className="flex justify-center flex-col items-start flex-wrap gap-2 p-5 w-[50%]">
+                <h2 className="font-bold mb-3">Backend</h2>
+                 <hr className="w-full border-t border-[#202944] mb-3" />
+                {Object.entries(backendCategories).map(
+                  ([categoryName, items]) => (
+                    <section key={categoryName}>
+                      <h3 className="font-bold my-3 !text-gray-600">
+                        {categoryName}
+                      </h3>
+
+                      <section className="flex gap-2 flex-wrap">
+                        {items.map((item, i) => (
+                          <button
+                            key={i}
+                            onClick={() =>
+                              handleSelect("backend",categoryName, item.name)
+                            }
+                            className={`px-2 hover:bg-[#1b31573d] hover:border-[#1B3157] flex items-center gap-1 py-1 rounded border cursor-pointer ${
+                              selectedOptions[categoryName] === item.name
+                                ? "bg-[#1b31573d] text-white"
+                                : "bg-[#08080c73] border border-[#202944] text-gray-300"
+                            }`}
+                          >
+                            <Image
+                              src={item.icon}
+                              alt={item.name}
+                              width={15}
+                              height={15}
+                            />
                             {item.name}
                           </button>
                         ))}

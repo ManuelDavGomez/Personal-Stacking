@@ -2,42 +2,98 @@
   "frontend": {
     "Frameworks": [
       {
-        "name": "React"
+        "name": "React",
+        "icon": "https://svgl.app/library/react_dark.svg"
       },
       {
-        "name": "Vue.js"
+        "name": "Vue.js",
+        "icon": "https://svgl.app/library/vue.svg"
       },
       {
-        "name": "Angular"
+        "name": "Angular",
+        "icon": "https://svgl.app/library/angular.svg"
       }
     ],
     "Preprocessors": [
       {
-        "name": "Sass"
+        "name": "Sass",
+        "icon": "https://svgl.app/library/sass.svg"
       },
       {
-        "name": "Less"
+        "name": "Less",
+        "icon": "https://lesscss.org/public/img/less_logo.png"
       }
     ],
     "Soporte Animaciones": [
       {
-        "name": "GSAP"
+        "name": "GSAP",
+        "icon": "https://gsap.com/community/uploads/monthly_2020_03/tweenmax.png.cf27916e926fbb328ff214f66b4c8429.png"
       },
       {
-        "name": "Anime.js"
+        "name": "Anime.js",
+        "icon": "https://animejs.com/assets/images/anime-js-logo-v4.svg"
       }
     ],
     "UI Frameworks": [
       {
-        "name": "Material-UI"
+        "name": "Material-UI",
+        "icon": "https://svgl.app/library/materialui.svg"
       },
       {
-        "name": "Ant Design"
+        "name": "Ant Design",
+        "icon": "https://svgl.app/library/ant-design-dark-theme.svg"
       },
       {
-        "name": "Bootstrap"
+        "name": "Bootstrap",
+        "icon": "https://svgl.app/library/bootstrap.svg"
       }
     ]
-
+  },
+  "backend": {
+    "Frameworks": [
+      {
+        "name": "Node.js",
+        "icon": "https://svgl.app/library/nodejs.svg"
+      },
+      {
+        "name": "Django",
+        "icon": "https://svgl.app/library/django.svg"
+      },
+      {
+        "name": "Ruby on Rails",
+        "icon": "https://svgl.app/library/ruby.svg"
+      }
+    ],
+    "Databases": [
+      {
+        "name": "PostgreSQL",
+        "icon": "https://svgl.app/library/postgresql.svg"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "https://svgl.app/library/mongodb.svg"
+      },
+      {
+        "name": "MySQL",
+        "icon": "https://svgl.app/library/mysql.svg"
+      }
+    ],
+    "APIs & Protocols": [
+     
+      {
+        "name": "GraphQL",
+        "icon": "https://svgl.app/library/graphql.svg"
+      }
+    ],
+    "Authentication & Authorization": [
+      {
+        "name": "OAuth",
+        "icon": "https://svgl.app/library/auth0.svg"
+      },
+      {
+        "name": "JWT",
+        "icon": "https://jwt.io/img/pic_logo.svg"
+      }
+    ]
   }
 }
