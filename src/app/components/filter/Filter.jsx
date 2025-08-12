@@ -1,174 +1,53 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { getData } from "@/app/lib/githubApi.js";
 import Tech from "../../data/Data.json";
+import Image from "next/image";
 
 const Filter = () => {
-  const [filtros, setFiltros] = useState({
-    name: "",
-    type: "",
-    language: "",
-    website: "",
-    description: "",
-    usecases: "",
-    createdAt: "",
-    lastUpdated: "",
-  });
-
   const [repos, setRepos] = useState([]);
-  const [resultados, setResultados] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(10);
+  const [visibleCount, setVisibleCount] = useState(9);
 
   const showMore = () => {
     setVisibleCount((prev) => prev + 10);
   };
 
   useEffect(() => {
-    const filtrados = Tech.filter((item) => {
-      return (
-        item.name.toLowerCase().includes(filtros.name.toLowerCase()) &&
-        item.type.toLowerCase().includes(filtros.type.toLowerCase()) &&
-        item.language.toLowerCase().includes(filtros.language.toLowerCase()) &&
-        item.website.toLowerCase().includes(filtros.website.toLowerCase()) &&
-        item.description
-          .toLowerCase()
-          .includes(filtros.description.toLowerCase()) &&
-        item.usecases
-          .join(" ")
-          .toLowerCase()
-          .includes(filtros.usecases.toLowerCase()) &&
-        item.createdAt
-          .toLowerCase()
-          .includes(filtros.createdAt.toLowerCase()) &&
-        item.lastUpdated
-          .toLowerCase()
-          .includes(filtros.lastUpdated.toLowerCase())
-      );
-    });
-
-    setResultados(filtrados);
-  }, [filtros]);
-
-  useEffect(() => {
-    fetch(
-      "https://api.github.com/search/repositories?q=topic:framework+stars:%3E10000&sort=stars&order=desc&per_page=20"
+    getData(
+      "https://api.github.com/search/repositories?q=topic:framework+stars:%3E10000&sort=stars&order=desc&per_page=12"
     )
-      .then((res) => res.json())
-      .then((data) => setRepos(data.items))
+      .then((data) => {
+        setRepos(data.items);
+      })
       .catch((err) => console.error(err));
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFiltros((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   return (
     <>
-      <h1 className="mt-20 mb-10 text-center">
+      <h1 className="mt-20 text-center">
         ENCUENTRA LO QUE <strong>NECESITES</strong>
       </h1>
       <section className="text-white">
-        <section className="flex items-center justify-center flex-row gap-4 mb-30">
-          <input
-            type="text"
-            name="name"
-            placeholder="Nombre"
-            autoComplete="off"
-            value={filtros.name}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="type"
-            placeholder="Tipo"
-            value={filtros.type}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="usecases"
-            placeholder="Casos de uso"
-            value={filtros.usecases}
-            onChange={handleChange}
-          />
-        </section>
-
-        <ul className="flex items-center justify-center gap-5 flex-wrap">
-          {resultados.slice(0, visibleCount).map((item, index) => (
-            <a
-              href={item.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline text-white"
-              key={index}
-            >
-              <li
-                key={index}
-                className="h-90 w-[300px] flex items-start flex-col justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300"
-              >
-                <h3>{item.name}</h3>
-                <p className="mt-3">{item.description}</p>
-                <section className="flex items-center gap-3 mt-5">
-                  <h4>Tipo: </h4>
-                  <p>{item.type}</p>
-                </section>
-
-                <section className="flex gap-2 flex-wrap mt-2">
-                  {item.usecases.map((usecase, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 my-3 text-sm bg-[#1a1a2e] text-white rounded-lg"
-                    >
-                      {usecase}
-                    </span>
-                  ))}
-                </section>
-
-                <section className="flex items-center gap-2 mb-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#202944"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                  </svg>
-                  <p>{item.stars}</p>
-                </section>
-              </li>
-            </a>
-          ))}
-        </ul>
-
-        {visibleCount < resultados.length && (
-          <button
-            onClick={showMore}
-            className="mt-10 mx-auto block cursor-pointer px-4 py-2 bg-[#08080c73] border border-[#202944] text-white rounded-lg hover:bg-[#1b31573d] transition-colors duration-300"
-          >
-            Ver mas
-          </button>
-        )}
-
-        <hr className="my-20 overflow-hidden border-[#202944]" />
+        <hr className="my-5 overflow-hidden border-[#202944]" />
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">Repositorios Populares</h2>
+          <h2 className="mb-10">FRAMEWORKS POPULARES</h2>
+
           <ul className="flex items-center justify-center gap-5 flex-wrap">
-            {repos.map((repo) => (
+            {repos.map((repo, index) => (
               <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                 <li
-                  key={repo.id}
-                  className="h-110 w-[300px] flex items-start flex-col justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300"
+                  key={index}
+                  className="h-130 w-[350px] flex items-start flex-col justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300"
                 >
+                  <Image
+                    src={repo.owner.avatar_url}
+                    alt={repo.name}
+                    width={50}
+                    height={50}
+                    className="rounded-full mb-3"
+                  />
                   <h3>{repo.name}</h3>
                   <p className="mt-3">{repo.description}</p>
 
