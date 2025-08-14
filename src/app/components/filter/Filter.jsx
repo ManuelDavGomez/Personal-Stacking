@@ -8,25 +8,36 @@ const Filter = () => {
   const [frameworks, setFrameworks] = useState([]);
   const [reposRecientes, setReposRecientes] = useState([]);
   const [tools, setTools] = useState([]);
+  const [education, setEducation] = useState([]);
+  const [css, setCss] = useState([]);
 
   useEffect(() => {
     async function fetchAll() {
       try {
-        const [frameworkData, recientesData, toolsData] = await Promise.all([
-          getData(
-            "https://api.github.com/search/repositories?q=topic:framework+stars:%3E10000&sort=stars&order=desc&per_page=12"
-          ),
-          getData(
-            "https://api.github.com/search/repositories?q=created:>2025-08-01&sort=stars&order=desc&per_page=12"
-          ),
-          getData(
-            "https://api.github.com/search/repositories?q=topic:developer-tools+stars:%3E10000&sort=stars&order=desc&per_page=12"
-          ),
-        ]);
+        const [frameworkData, recientesData, toolsData, educationData, css] =
+          await Promise.all([
+            getData(
+              "https://api.github.com/search/repositories?q=topic:framework+stars:%3E10000&sort=stars&order=desc&per_page=12"
+            ),
+            getData(
+              "https://api.github.com/search/repositories?q=created:>2025-08-01&sort=stars&order=desc&per_page=12"
+            ),
+            getData(
+              "https://api.github.com/search/repositories?q=topic:developer-tools+stars:%3E10000&sort=stars&order=desc&per_page=12"
+            ),
+            getData(
+              "https://api.github.com/search/repositories?q=topic:education&sort=stars&order=desc&per_page=12"
+            ),
+            getData(
+              "https://api.github.com/search/repositories?q=topic:css-framework&sort=stars&order=desc&per_page=12"
+            ),
+          ]);
 
         setFrameworks(frameworkData.items || []);
         setReposRecientes(recientesData.items || []);
         setTools(toolsData.items || []);
+        setEducation(educationData.items || []);
+        setCss(css.items || []);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -56,6 +67,16 @@ const Filter = () => {
         <section className="flex flex-col items-center justify-center mt-20">
           <h2 className="mb-10">HERRAMIENTAS DE DESARROLLO WEB POPULARES</h2>
           <RepoList repos={tools} />
+        </section>
+
+        <section className="flex flex-col items-center justify-center mt-20">
+          <h2 className="mb-10">REPOSITORIOS EDUCATIVOS</h2>
+          <RepoList repos={education} />
+        </section>
+
+        <section className="flex flex-col items-center justify-center mt-20">
+          <h2 className="mb-10">FRAMEWORKS Y LIBRERIAS CSS</h2>
+          <RepoList repos={css} />
         </section>
       </section>
     </>

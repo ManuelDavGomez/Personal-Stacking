@@ -13,10 +13,10 @@
 
   margin-bottom: 20px;
 
-  background: #eda9de;
-  background: -webkit-linear-gradient(to left, #eda9de 0%, #89015f 100%);
-  background: -moz-linear-gradient(to left, #eda9de 0%, #89015f 100%);
-  background: linear-gradient(to left, #eda9de 0%, #89015f 100%);
+  background: #08080c73;
+  background: -webkit-linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
+  background: -moz-linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
+  background: linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

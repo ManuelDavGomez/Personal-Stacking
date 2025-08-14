@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "../app/components/navbar/Nav.jsx"; // Import your custom CSS for the navbar
 import Faq from "./components/faq/Faq";
 import Foot from "./components/Foot";
+import ScrollTop from "./components/ScrollTop";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -16,13 +17,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${inter.className} antialiased`}>
         <Nav />
         {children}
 
         <Faq />
-
+        <ScrollTop />
         <Foot />
       </body>
     </html>
