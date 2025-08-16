@@ -2,7 +2,6 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-13-black?style=flat&logo=next.js)](https://nextjs.org/) 
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/) 
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
 
 **Stacking** es un constructor interactivo de *tech stacks* que te permite explorar, combinar y visualizar diferentes tecnologías de frontend y backend de manera sencilla.  
