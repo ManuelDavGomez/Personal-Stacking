@@ -20,9 +20,7 @@ const Nav = () => {
           <li>
             <a href="/pages/library">BIBLIOTECA</a>
           </li>
-          <li>
-            <a href="/pages/acercade">ACERCA</a>
-          </li>
+          
         </ul>
       </div>
     </nav>

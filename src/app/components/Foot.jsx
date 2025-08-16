@@ -11,7 +11,9 @@ const Foot = () => {
             <div>
               <div class="flex justify-center items-center gap-2 text-teal-300 sm:justify-start">
                 <Image class="w-12 h-12" src={Logo} alt="Company Logo" />
-                <h2>Stacking</h2>
+                <h2 className="bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">
+                  Stacking
+                </h2>
               </div>
 
               <p class="max-w-md mx-auto mt-6 leading-relaxed text-center text-gray-400 sm:max-w-xs sm:mx-0 sm:text-left">

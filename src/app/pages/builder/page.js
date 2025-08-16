@@ -19,7 +19,9 @@ export default function Page() {
   return (
     <section className="flex justify-center flex-col items-center w-full p-5 pt-32 pb-20">
       <section className="p-8 flex justify-center flex-col items-center w-[100%] min-[1150px]:w-[1100px] min-[450px]:w-[80%] min-[768px]:w-full min-[1300px]:w-[1300px] min-[1500px]:w-[1400px]">
-        <h1 className="text-2xl font-bold mb-10 text-center">Explora tu Stack</h1>
+
+        <h1 className="font-bold mb-10 text-center bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">Explora tu Stack</h1>
+
         <hr className="w-full border-t border-[#202944] mb-10" />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -51,7 +53,7 @@ export default function Page() {
                     key={idx}
                     className="flex items-center justify-between gap-3 bg-[#08080c73] border border-[#202944] rounded-lg p-2"
                   >
-                    <code className="text-[#9cdcfe] text-sm break-all">
+                    <code className="text-[#9cdcfe] text-sm">
                       {cmd}
                     </code>
                     <button

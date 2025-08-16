@@ -13,12 +13,10 @@
 
   margin-bottom: 20px;
 
-  background: #08080c73;
-  background: -webkit-linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
-  background: -moz-linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
-  background: linear-gradient(to left, #1B3157 0%, #9ab3ff 100%);
+  background-image: linear-gradient(to top left, #0ea5e9, #082f49);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .accordion-item {
   margin-top: 16px;
@@ -32,15 +30,13 @@
   border: 1px solid #202944;
 }
 
-
 .accordion-item:hover {
   background: #1b31573d;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.2px);
   -webkit-backdrop-filter: blur(3.2px);
-  border: 1px solid #1B3157;
-
+  border: 1px solid #1b3157;
 }
 
 .accordion-item-title p {

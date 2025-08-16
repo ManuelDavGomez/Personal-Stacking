@@ -1,12 +1,13 @@
 import Image from "next/image";
 import PagesLayout from "./pagesLayout";
 import heroImg from "../app/assets/hero.png";
+import "../app/globals.css"
 
 export default function Home() {
   return (
     <>
       <section className="flex flex-col items-center justify-center h-[100vh] w-full hero_bg">
-        <h1>
+        <h1 className="bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">
           CONSTRUYE TU STACK TECNOLÓGICO EN <strong>MINUTOS</strong>
         </h1>
         <p className="text-center my-5 px-20">

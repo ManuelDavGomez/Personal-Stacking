@@ -47,7 +47,7 @@ const Filter = () => {
 
   return (
     <>
-      <h1 className="mt-20 text-center">
+      <h1 className="mt-20 text-center bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">
         ENCUENTRA LO QUE <strong>NECESITES</strong>
       </h1>
       <section className="text-white">
