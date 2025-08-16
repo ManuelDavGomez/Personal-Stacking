@@ -4,7 +4,6 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/) 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](../../issues)
 
 **Stacking** es un constructor interactivo de *tech stacks* que te permite explorar, combinar y visualizar diferentes tecnologías de frontend y backend de manera sencilla.  
 El objetivo es facilitar a los desarrolladores la elección de stacks tecnológicos mostrando los comandos necesarios para instalarlos y ejemplos de configuración.
