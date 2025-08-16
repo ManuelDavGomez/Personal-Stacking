@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ⚡ Stacking
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-13-black?style=flat&logo=next.js)](https://nextjs.org/) 
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
 
-First, run the development server:
+**Stacking** es un constructor interactivo de *tech stacks* que te permite explorar, combinar y visualizar diferentes tecnologías de frontend y backend de manera sencilla.  
+El objetivo es facilitar a los desarrolladores la elección de stacks tecnológicos mostrando los comandos necesarios para instalarlos y ejemplos de configuración.
+
+---
+
+## ✨ Características
+
+- 📚 Catálogo de tecnologías organizadas por categorías (Frontend, Backend, Bases de datos, etc.)
+- 🖼️ Íconos visuales de cada tecnología
+- ⚡ Visualización de stacks completos
+- 💻 Generación de comandos paso a paso para instalar cada stack
+- 🎨 Interfaz moderna con **Next.js + TailwindCSS**
+- 🔍 Fácil de explorar gracias a su diseño con grid y tarjetas interactivas
+
+---
+
+## 🛠️ Tecnologías usadas
+
+- [Next.js](https://nextjs.org/) – Framework de React para el frontend
+- [TailwindCSS](https://tailwindcss.com/) – Estilos rápidos y modernos
+---
+
+## 🚀 Instalación y uso
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/stacking.git
+cd stacking
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+```
+
+Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre en tu navegador:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📂 Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+stacking/
+├── app/                   # Rutas y páginas principales (Next.js App Router)
+│   ├── page.tsx           # Página principal
+│   └── data/TechData.json # Datos de las tecnologías
+├── public/                # Íconos e imágenes
+├── styles/                # Archivos de estilos globales
+├── next.config.js         # Configuración de Next.js
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 Licencia
 
-## Deploy on Vercel
+Este proyecto está bajo la licencia **MIT**.  
+Puedes usarlo, modificarlo y compartirlo libremente.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 💡 Inspiración
+La idea nace de la necesidad de probar combinaciones de stacks sin tener que recordar siempre los comandos de instalación.  
+Con **Stacking** puedes visualizarlo de forma clara y rápida, ahorrando tiempo en la configuración inicial de tus proyectos.
+
+---
