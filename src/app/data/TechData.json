@@ -2,6 +2,11 @@
   {
     "name": "NTT",
     "description": "Next.js con TailwindCSS y TypeScript usando el App Router",
+    "icons": [
+      "https://svgl.app/library/nextjs_icon_dark.svg",
+      "https://svgl.app/library/tailwindcss.svg",
+      "https://svgl.app/library/typescript.svg"
+    ],
     "commands": [
       "npx create-next-app@latest my-next-app --ts --eslint --app",
       "cd my-next-app",
