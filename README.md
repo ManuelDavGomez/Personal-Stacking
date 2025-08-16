@@ -26,10 +26,6 @@ El objetivo es facilitar a los desarrolladores la elección de stacks tecnológi
 
 - [Next.js](https://nextjs.org/) – Framework de React para el frontend
 - [TailwindCSS](https://tailwindcss.com/) – Estilos rápidos y modernos
-- [TypeScript](https://www.typescriptlang.org/) – Tipado estático
-- [Next/Image](https://nextjs.org/docs/pages/api-reference/components/image) – Optimización de imágenes
-- [Vercel](https://vercel.com/) – Despliegue (opcional)
-
 ---
 
 ## 🚀 Instalación y uso
@@ -73,39 +69,6 @@ stacking/
 ├── next.config.js         # Configuración de Next.js
 └── package.json
 ```
-
----
-
-## 📸 Capturas
-
-*(Agrega aquí tus screenshots mostrando la UI con íconos y stacks)*
-
-Ejemplo:  
-![Ejemplo de UI](https://via.placeholder.com/800x400.png?text=Demo+Stacking)
-
----
-
-## 📌 Roadmap
-
-- [ ] Integrar más tecnologías (ejemplo: GraphQL, Prisma, Redis)
-- [ ] Añadir opción de copiar comandos al portapapeles
-- [ ] Crear vista de comparación entre stacks
-- [ ] Exportar configuración como archivo `README` o snippet
-- [ ] Mejorar interfaz con animaciones (Framer Motion)
-
----
-
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas!  
-Si quieres mejorar **Stacking**, abre un [issue](../../issues) o envía un [pull request](../../pulls).
-
-Pasos para contribuir:
-1. Haz un fork del proyecto
-2. Crea tu rama (`git checkout -b feature/nueva-funcion`)
-3. Haz commit de tus cambios (`git commit -m 'Agrega nueva función'`)
-4. Haz push a tu rama (`git push origin feature/nueva-funcion`)
-5. Abre un Pull Request 🚀
 
 ---
 
