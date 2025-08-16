@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import stacks from "@/app/data/TechData.json";
+import tech from "@/app/data/TechData.json";
 import Image from "next/image";
 
 export default function Page() {
@@ -27,20 +27,20 @@ export default function Page() {
         <hr className="w-full border-t border-[#202944] mb-10" />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {stacks.map((stack, idx) => (
+          {tech.stacks.map((stack, idx) => (
             <li
               key={idx}
               className="flex flex-col items-start justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300 cursor-pointer"
               onClick={() => setSelectedStack(stack)}
             >
-              {/* Contenedor de iconos en fila */}
+           
               <div className="flex flex-row gap-2 mb-4">
                 {stack.icons.map((url, id) => (
-                  <Image key={id} alt="icon" src={url} width={30} height={30} />
+                  <Image key={id} alt="icon" src={url} width={25} height={25} />
                 ))}
               </div>
 
-              {/* Título y descripción en columna */}
+           
               <h3 className="font-bold">{stack.name}</h3>
               <p className="mt-2 text-gray-600">{stack.description}</p>
             </li>

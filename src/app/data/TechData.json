@@ -1,229 +1,377 @@
-[
-  {
-    "name": "NTT",
-    "description": "Next.js con TailwindCSS y TypeScript usando el App Router",
-    "icons": [
-      "https://svgl.app/library/nextjs_icon_dark.svg",
-      "https://svgl.app/library/tailwindcss.svg",
-      "https://svgl.app/library/typescript.svg"
-    ],
-    "commands": [
-      "npx create-next-app@latest my-next-app --ts --eslint --app",
-      "cd my-next-app",
-      "npm install -D tailwindcss postcss autoprefixer",
-      "npx tailwindcss init -p"
-    ]
-  },
-  {
-    "name": "RTT",
-    "description": "React con Vite, TailwindCSS y TypeScript",
-    "commands": [
-      "npm create vite@latest my-react-vite -- --template react-ts",
-      "cd my-react-vite",
-      "npm install",
-      "npm install -D tailwindcss postcss autoprefixer",
-      "npx tailwindcss init -p"
-    ]
-  },
-  {
-    "name": "MERN",
-    "description": "MongoDB + Express + React + Node.js",
-    "commands": [
-      "npm create vite@latest my-app --template react",
-      "cd my-app",
-      "npm install express mongoose cors dotenv",
-      "npm install --save-dev nodemon"
-    ]
-  },
-  {
-    "name": "NPP",
-    "description": "Next.js con Prisma ORM y PostgreSQL",
-    "commands": [
-      "npx create-next-app@latest my-next-prisma --ts --eslint",
-      "cd my-next-prisma",
-      "npm install prisma @prisma/client",
-      "npx prisma init"
-    ]
-  },
-  {
-    "name": "RRT",
-    "description": "Create React App con Redux Toolkit y TypeScript",
-    "commands": [
-      "npx create-react-app my-react-redux --template redux-typescript",
-      "cd my-react-redux",
-      "npm install"
-    ]
-  },
-  {
-    "name": "VVT",
-    "description": "Vue 3 con Vuex y TailwindCSS usando Vite",
-    "commands": [
-      "npm create vite@latest my-vue-app -- --template vue",
-      "cd my-vue-app",
-      "npm install",
-      "npm install vuex@next",
-      "npm install -D tailwindcss postcss autoprefixer",
-      "npx tailwindcss init -p"
-    ]
-  },
-  {
-    "name": "NTP",
-    "description": "Nuxt 3 con TailwindCSS y Pinia como store",
-    "commands": [
-      "npx nuxi init my-nuxt-app",
-      "cd my-nuxt-app",
-      "npm install",
-      "npm install -D tailwindcss postcss autoprefixer",
-      "npx tailwindcss init -p",
-      "npm install pinia"
-    ]
-  },
-  {
-    "name": "STT",
-    "description": "SvelteKit con TailwindCSS y TypeScript",
-    "commands": [
-      "npm create svelte@latest my-sveltekit-app",
-      "cd my-sveltekit-app",
-      "npm install",
-      "npm install -D tailwindcss postcss autoprefixer",
-      "npx tailwindcss init -p"
-    ]
-  },
-  {
-    "name": "AAN",
-    "description": "Angular con NgRx para manejo de estado",
-    "commands": [
-      "npm install -g @angular/cli",
-      "ng new my-angular-app --routing --style=css",
-      "cd my-angular-app",
-      "ng add @ngrx/store"
-    ]
-  },
-  {
-    "name": "ST",
-    "description": "SolidJS usando Vite y TypeScript",
-    "commands": [
-      "npm create vite@latest my-solid-app -- --template solid",
-      "cd my-solid-app",
-      "npm install"
-    ]
-  },
-  {
-    "name": "RPP",
-    "description": "Remix con PostgreSQL y Prisma ORM",
-    "commands": [
-      "npx create-remix@latest my-remix-app",
-      "cd my-remix-app",
-      "npm install",
-      "npm install prisma @prisma/client",
-      "npx prisma init"
-    ]
-  },
-  {
-    "name": "ETTP",
-    "description": "Express con TypeScript y TypeORM conectado a PostgreSQL",
-    "commands": [
-      "mkdir my-express-ts",
-      "cd my-express-ts",
-      "npm init -y",
-      "npm install express reflect-metadata typeorm pg",
-      "npm install -D typescript ts-node-dev @types/express",
-      "npx tsc --init"
-    ]
-  },
-  {
-    "name": "FTPS",
-    "description": "Fastify con TypeScript y Prisma usando SQLite",
-    "commands": [
-      "mkdir my-fastify",
-      "cd my-fastify",
-      "npm init -y",
-      "npm install fastify @fastify/static prisma @prisma/client",
-      "npm install -D typescript ts-node-dev",
-      "npx prisma init --datasource-provider sqlite",
-      "npx tsc --init"
-    ]
-  },
-  {
-    "name": "KMM",
-    "description": "Koa con MongoDB y Mongoose",
-    "commands": [
-      "mkdir my-koa-app",
-      "cd my-koa-app",
-      "npm init -y",
-      "npm install koa koa-router mongoose dotenv",
-      "npm install -D nodemon"
-    ]
-  },
-  {
-    "name": "NTP",
-    "description": "NestJS con TypeORM y PostgreSQL",
-    "commands": [
-      "npm i -g @nestjs/cli",
-      "nest new my-nest-app",
-      "cd my-nest-app",
-      "npm install typeorm pg",
-      "npm install --save @nestjs/typeorm"
-    ]
-  },
-  {
-    "name": "AdonisJS",
-    "description": "Framework AdonisJS en TypeScript para Node.js",
-    "commands": [
-      "npm init adonis-ts-app@latest my-adonis-app",
-      "cd my-adonis-app",
-      "npm install"
-    ]
-  },
-  {
-    "name": "LM",
-    "description": "Laravel con base de datos MySQL",
-    "commands": [
-      "composer create-project --prefer-dist laravel/laravel my-laravel-app",
-      "cd my-laravel-app",
-      "php artisan serve"
-    ]
-  },
-  {
-    "name": "DP",
-    "description": "Django con base de datos PostgreSQL",
-    "commands": [
-      "python -m venv venv",
-      "venv\\Scripts\\activate",
-      "pip install django psycopg2-binary",
-      "django-admin startproject mydjango",
-      "cd mydjango"
-    ]
-  },
-  {
-    "name": "FSP",
-    "description": "Flask con SQLAlchemy y PostgreSQL",
-    "commands": [
-      "python -m venv venv",
-      "venv\\Scripts\\activate",
-      "pip install flask sqlalchemy psycopg2-binary",
-      "mkdir myflask",
-      "cd myflask",
-      "echo.>app.py"
-    ]
-  },
-  {
-    "name": "RP",
-    "description": "Ruby on Rails con base de datos PostgreSQL",
-    "commands": [
-      "gem install rails",
-      "rails new my-rails-app -d postgresql",
-      "cd my-rails-app",
-      "rails db:create"
-    ]
-  },
-  {
-    "name": "ASP.NET API",
-    "description": "API con ASP.NET Core",
-    "commands": [
-      "dotnet new webapi -o my-dotnet-api",
-      "cd my-dotnet-api",
-      "dotnet restore"
-    ]
-  }
-]
+{
+  "packageManagers": [
+    {
+      "name": "npm",
+      "description": "Gestor de paquetes de Node.js",
+      "icons": [],
+      "commands": ["https://nodejs.org"]
+    },
+    {
+      "name": "composer",
+      "description": "Gestor de paquetes para PHP",
+      "icons": [],
+      "commands": ["https://getcomposer.org/download/"]
+    },
+    {
+      "name": "pip",
+      "description": "Gestor de paquetes para Python",
+      "icons": [],
+      "commands": ["https://www.python.org/downloads/"]
+    },
+    {
+      "name": "gem",
+      "description": "Gestor de paquetes para Ruby",
+      "icons": [],
+      "commands": ["https://rubyinstaller.org/"]
+    },
+    {
+      "name": "dotnet",
+      "description": "CLI para .NET y C#",
+      "icons": [],
+      "commands": ["https://dotnet.microsoft.com/download"]
+    },
+    {
+      "name": "Go",
+      "description": "Golang",
+      "icons": [],
+      "commands": ["https://go.dev/dl/"]
+    },
+    {
+      "name": "Java (OpenJDK)",
+      "description": "Java Development Kit (JDK) oficial y Open Source",
+      "icons": [],
+      "commands": ["https://openjdk.java.net/"]
+    },
+    {
+      "name": "Apache Maven",
+      "description": "Herramienta de construcción y gestión de proyectos Java",
+      "icons": [],
+      "commands": ["https://maven.apache.org/download.cgi"]
+    },
+     {
+      "name": "Rust",
+      "description": "Rust",
+      "icons": [],
+      "commands": ["curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"]
+    }
+  ],
+  "stacks": [
+    {
+      "name": "NTT",
+      "description": "Next.js con TailwindCSS y TypeScript usando el App Router",
+      "icons": [
+        "https://svgl.app/library/nextjs_icon_dark.svg",
+        "https://svgl.app/library/tailwindcss.svg",
+        "https://svgl.app/library/typescript.svg"
+      ],
+      "commands": [
+        "npx create-next-app@latest my-next-app --ts --eslint --app --tailwind",
+        "cd my-next-app"
+      ]
+    },
+    {
+      "name": "RTT",
+      "description": "React con Vite, TailwindCSS y TypeScript",
+      "icons": [
+        "https://svgl.app/library/react_dark.svg",
+        "https://svgl.app/library/tailwindcss.svg",
+        "https://svgl.app/library/typescript.svg"
+      ],
+      "commands": [
+        "npm create vite@latest my-react-vite -- --template react-ts",
+        "cd my-react-vite",
+        "npm install",
+        "npm install -D tailwindcss postcss autoprefixer",
+        "npx tailwindcss init -p"
+      ]
+    },
+    {
+      "name": "MERN",
+      "description": "MongoDB + Express + React + Node.js",
+      "icons": [
+        "https://svgl.app/library/mongodb.svg",
+        "https://svgl.app/library/expressjs_dark.svg",
+        "https://svgl.app/library/react_dark.svg",
+        "https://svgl.app/library/nodejs.svg"
+      ],
+      "commands": [
+        "npm create vite@latest my-app --template react",
+        "cd my-app",
+        "npm install express mongoose cors dotenv",
+        "npm install --save-dev nodemon"
+      ]
+    },
+    {
+      "name": "NPP",
+      "description": "Next.js con Prisma ORM y PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/nextjs_icon_dark.svg",
+        "https://svgl.app/library/prisma_dark.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "npx create-next-app@latest my-next-prisma --ts --eslint",
+        "cd my-next-prisma",
+        "npm install prisma @prisma/client",
+        "npx prisma init"
+      ]
+    },
+    {
+      "name": "RRT",
+      "description": "Create React App con Redux Toolkit y TypeScript",
+      "icons": [
+        "https://svgl.app/library/react_dark.svg",
+        "https://svgl.app/library/redux.svg",
+        "https://svgl.app/library/typescript.svg"
+      ],
+      "commands": [
+        "npx create-react-app my-react-redux --template redux-typescript",
+        "cd my-react-redux",
+        "npm install"
+      ]
+    },
+    {
+      "name": "VVT",
+      "description": "Vue 3 con Vuex y TailwindCSS usando Vite",
+      "icons": [
+        "https://svgl.app/library/vue.svg",
+        "https://user-images.githubusercontent.com/7110136/29002857-9e802f08-7ab4-11e7-9c31-604b5d0d0c19.png",
+        "https://svgl.app/library/tailwindcss.svg"
+      ],
+      "commands": [
+        "npm create vite@latest my-vue-app -- --template vue",
+        "cd my-vue-app",
+        "npm install",
+        "npm install vuex@next",
+        "npm install -D tailwindcss postcss autoprefixer",
+        "npx tailwindcss init -p"
+      ]
+    },
+    {
+      "name": "NTP",
+      "description": "Nuxt 3 con TailwindCSS y Pinia como store",
+      "icons": [
+        "https://svgl.app/library/nuxt.svg",
+        "https://svgl.app/library/tailwindcss.svg",
+        "https://svgl.app/library/pinia.svg"
+      ],
+      "commands": [
+        "npx nuxi init my-nuxt-app",
+        "cd my-nuxt-app",
+        "npm install",
+        "npm install -D tailwindcss postcss autoprefixer",
+        "npx tailwindcss init -p",
+        "npm install pinia"
+      ]
+    },
+    {
+      "name": "STT",
+      "description": "SvelteKit con TailwindCSS y TypeScript",
+      "icons": [
+        "https://svgl.app/library/svelte.svg",
+        "https://svgl.app/library/tailwindcss.svg",
+        "https://svgl.app/library/typescript.svg"
+      ],
+      "commands": [
+        "npm create svelte@latest my-sveltekit-app",
+        "cd my-sveltekit-app",
+        "npm install",
+        "npm install -D tailwindcss postcss autoprefixer",
+        "npx tailwindcss init -p"
+      ]
+    },
+    {
+      "name": "AN",
+      "description": "Angular con NgRx para manejo de estado",
+      "icons": [
+        "https://svgl.app/library/angular.svg",
+        "https://v7.ngrx.io/assets/images/badge.svg"
+      ],
+      "commands": [
+        "npm install -g @angular/cli",
+        "ng new my-angular-app --routing --style=css",
+        "cd my-angular-app",
+        "ng add @ngrx/store"
+      ]
+    },
+    {
+      "name": "ST",
+      "description": "SolidJS usando Vite y TypeScript",
+      "icons": [
+        "https://svgl.app/library/solidjs.svg",
+        "https://svgl.app/library/typescript.svg"
+      ],
+      "commands": [
+        "npm create vite@latest my-solid-app -- --template solid",
+        "cd my-solid-app",
+        "npm install"
+      ]
+    },
+    {
+      "name": "RPP",
+      "description": "Remix con PostgreSQL y Prisma ORM",
+      "icons": [
+        "https://svgl.app/library/remix_dark.svg",
+        "https://svgl.app/library/postgresql.svg",
+        "https://svgl.app/library/prisma_dark.svg"
+      ],
+      "commands": [
+        "npx create-remix@latest my-remix-app",
+        "cd my-remix-app",
+        "npm install",
+        "npm install prisma @prisma/client",
+        "npx prisma init"
+      ]
+    },
+    {
+      "name": "ETTP",
+      "description": "Express con TypeScript y TypeORM conectado a PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/expressjs_dark.svg",
+        "https://svgl.app/library/typescript.svg",
+        "https://svgl.app/library/typeorm.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "mkdir my-express-ts",
+        "cd my-express-ts",
+        "npm init -y",
+        "npm install express reflect-metadata typeorm pg",
+        "npm install -D typescript ts-node-dev @types/express",
+        "npx tsc --init"
+      ]
+    },
+    {
+      "name": "FTPS",
+      "description": "Fastify con TypeScript y Prisma usando SQLite",
+      "icons": [
+        "https://svgl.app/library/fastify_dark.svg",
+        "https://svgl.app/library/typescript.svg",
+        "https://svgl.app/library/prisma_dark.svg",
+        "https://svgl.app/library/sqlite.svg"
+      ],
+      "commands": [
+        "mkdir my-fastify",
+        "cd my-fastify",
+        "npm init -y",
+        "npm install fastify @fastify/static prisma @prisma/client",
+        "npm install -D typescript ts-node-dev",
+        "npx prisma init --datasource-provider sqlite",
+        "npx tsc --init"
+      ]
+    },
+    {
+      "name": "KMM",
+      "description": "Koa con MongoDB y Mongoose",
+      "icons": [
+        "https://raw.githubusercontent.com/github/explore/087f23463641d25ee971402fa26e3dfb2855edb9/topics/koa/koa.png",
+        "https://avatars.githubusercontent.com/u/45120?s=280&v=4",
+        "https://avatars.githubusercontent.com/u/7552965?s=280&v=4"
+      ],
+      "commands": [
+        "mkdir my-koa-app",
+        "cd my-koa-app",
+        "npm init -y",
+        "npm install koa koa-router mongoose dotenv",
+        "npm install -D nodemon"
+      ]
+    },
+    {
+      "name": "NTP",
+      "description": "NestJS con TypeORM y PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/nestjs.svg",
+        "https://svgl.app/library/typeorm.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "npm i -g @nestjs/cli",
+        "nest new my-nest-app",
+        "cd my-nest-app",
+        "npm install typeorm pg",
+        "npm install --save @nestjs/typeorm"
+      ]
+    },
+    {
+      "name": "AdonisJS",
+      "description": "Framework AdonisJS en TypeScript para Node.js",
+      "icons": ["https://avatars.githubusercontent.com/u/13810373?s=200&v=4"],
+      "commands": [
+        "npm init adonis-ts-app@latest my-adonis-app",
+        "cd my-adonis-app",
+        "npm install"
+      ]
+    },
+    {
+      "name": "LM",
+      "description": "Laravel con base de datos MySQL",
+      "icons": [
+        "https://svgl.app/library/laravel.svg",
+        "https://svgl.app/library/mysql.svg"
+      ],
+      "commands": [
+        "composer create-project --prefer-dist laravel/laravel my-laravel-app",
+        "cd my-laravel-app",
+        "php artisan serve"
+      ]
+    },
+    {
+      "name": "DP",
+      "description": "Django con base de datos PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/django.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "python -m venv venv",
+        "venv\\Scripts\\activate",
+        "pip install django psycopg2-binary",
+        "django-admin startproject mydjango",
+        "cd mydjango"
+      ]
+    },
+    {
+      "name": "FSP",
+      "description": "Flask con SQLAlchemy y PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/flask-dark.svg",
+        "https://avatars.githubusercontent.com/u/6043126?s=200&v=4",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "python -m venv venv",
+        "venv\\Scripts\\activate",
+        "pip install flask sqlalchemy psycopg2-binary",
+        "mkdir myflask",
+        "cd myflask",
+        "echo.>app.py"
+      ]
+    },
+    {
+      "name": "RP",
+      "description": "Ruby on Rails con base de datos PostgreSQL",
+      "icons": [
+        "https://svgl.app/library/ruby.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "gem install rails",
+        "rails new my-rails-app -d postgresql",
+        "cd my-rails-app",
+        "rails db:create"
+      ]
+    },
+    {
+      "name": "ASP.NET API",
+      "description": "API con ASP.NET Core",
+      "icons": [
+        "https://static.gunnarpeipman.com/wp-content/uploads/2020/09/aspnet-featured.png"
+      ],
+      "commands": [
+        "dotnet new webapi -o my-dotnet-api",
+        "cd my-dotnet-api",
+        "dotnet restore"
+      ]
+    }
+  ]
+}
