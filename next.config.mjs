@@ -33,6 +33,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "static.gunnarpeipman.com",
       },
+      {
+        protocol: "https",
+        hostname: "getcomposer.org",
+      },
     ],
   },
 };

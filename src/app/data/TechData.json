@@ -1,58 +1,62 @@
 {
   "packageManagers": [
     {
-      "name": "npm",
-      "description": "Gestor de paquetes de Node.js",
-      "icons": [],
+      "name": "Npm",
+      "description": "Gestor de paquetes para Node.js",
+      "icons": ["https://svgl.app/library/npm.svg"],
       "commands": ["https://nodejs.org"]
     },
     {
-      "name": "composer",
+      "name": "Composer",
       "description": "Gestor de paquetes para PHP",
-      "icons": [],
+      "icons": ["https://getcomposer.org/img/logo-composer-transparent.png"],
       "commands": ["https://getcomposer.org/download/"]
     },
     {
-      "name": "pip",
+      "name": "Pip",
       "description": "Gestor de paquetes para Python",
-      "icons": [],
+      "icons": [
+        "https://raw.githubusercontent.com/github/explore/666de02829613e0244e9441b114edb85781e972c/topics/pip/pip.png"
+      ],
       "commands": ["https://www.python.org/downloads/"]
     },
     {
-      "name": "gem",
+      "name": "Gem",
       "description": "Gestor de paquetes para Ruby",
-      "icons": [],
+      "icons": ["https://avatars.githubusercontent.com/u/208761?s=48&v=4"],
       "commands": ["https://rubyinstaller.org/"]
     },
     {
-      "name": "dotnet",
-      "description": "CLI para .NET y C#",
-      "icons": [],
+      "name": "Dotnet",
+      "description": "CLI y SDK oficial para .NET y C#",
+      "icons": ["https://avatars.githubusercontent.com/u/27453006?s=48&v=4"],
       "commands": ["https://dotnet.microsoft.com/download"]
     },
     {
       "name": "Go",
-      "description": "Golang",
-      "icons": [],
+      "description": "Lenguaje de programación Go (Golang)",
+      "icons": ["https://svgl.app/library/golang.svg"],
       "commands": ["https://go.dev/dl/"]
     },
     {
       "name": "Java (OpenJDK)",
-      "description": "Java Development Kit (JDK) oficial y Open Source",
-      "icons": [],
-      "commands": ["https://openjdk.java.net/"]
+      "description": "Kit de desarrollo oficial de Java (JDK)",
+      "icons": ["https://svgl.app/library/java.svg"],
+      "commands": ["https://openjdk.org/install/"]
     },
     {
       "name": "Apache Maven",
-      "description": "Herramienta de construcción y gestión de proyectos Java",
-      "icons": [],
+      "description": "Gestor de dependencias y construcción para Java",
+      "icons": ["https://avatars.githubusercontent.com/u/47359?s=48&v=4"],
       "commands": ["https://maven.apache.org/download.cgi"]
     },
-     {
+    {
       "name": "Rust",
-      "description": "Rust",
-      "icons": [],
-      "commands": ["curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"]
+      "description": "Lenguaje de programación Rust y su instalador oficial",
+      "icons": ["https://avatars.githubusercontent.com/u/5430905?s=48&v=4"],
+      "commands": [
+        "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+      ]
     }
   ],
   "stacks": [
