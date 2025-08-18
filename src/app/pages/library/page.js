@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import Filter from "@/app/components/filter/Filter";
 import PagesLayout from "../../pagesLayout.jsx";
 

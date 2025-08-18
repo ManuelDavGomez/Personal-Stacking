@@ -35,7 +35,9 @@
     {
       "name": "Go",
       "description": "Lenguaje de programación Go (Golang)",
-      "icons": ["https://svgl.app/library/golang.svg"],
+      "icons": [
+        "https://raw.githubusercontent.com/github/explore/ac0b33cc8936c152bc0dacf91436f8099a5413c9/topics/go/go.png"
+      ],
       "commands": ["https://go.dev/dl/"]
     },
     {
