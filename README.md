@@ -13,7 +13,6 @@ El objetivo es facilitar a los desarrolladores la elección de stacks tecnológi
 
 - 📚 Catálogo de tecnologías organizadas por categorías (Frontend, Backend, Bases de datos, etc.)
 - 🖼️ Íconos visuales de cada tecnología
-- ⚡ Visualización de stacks completos
 - 💻 Generación de comandos paso a paso para instalar cada stack
 - 🎨 Interfaz moderna con **Next.js + TailwindCSS**
 - 🔍 Fácil de explorar gracias a su diseño con grid y tarjetas interactivas
