@@ -73,7 +73,12 @@
       "commands": [
         "npx create-next-app@latest my-next-app --ts --eslint --app --tailwind",
         "cd my-next-app"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "React",
+      "category": "Frontend",
+      "technology": ["Next.js", "TailwindCSS", "TypeScript"],
+      "isNew": true
     },
     {
       "name": "RTT",
@@ -89,7 +94,12 @@
         "npm install",
         "npm install -D tailwindcss postcss autoprefixer",
         "npx tailwindcss init -p"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "React",
+      "category": "Frontend",
+      "technology": ["React", "TailwindCSS", "TypeScript"],
+      "isNew": false
     },
     {
       "name": "MERN",
@@ -105,7 +115,12 @@
         "cd my-app",
         "npm install express mongoose cors dotenv",
         "npm install --save-dev nodemon"
-      ]
+      ],
+      "database": "MongoDB",
+      "ecosystem": "React",
+      "category": "fullstack",
+      "technology": ["React", "Express", "MongoDB", "Node.js"],
+      "isNew": false
     },
     {
       "name": "NPP",
@@ -120,7 +135,12 @@
         "cd my-next-prisma",
         "npm install prisma @prisma/client",
         "npx prisma init"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "React",
+      "category": "fullstack",
+      "technology": ["Next.js", "Prisma", "PostgreSQL"],
+      "isNew": false
     },
     {
       "name": "RRT",
@@ -134,7 +154,12 @@
         "npx create-react-app my-react-redux --template redux-typescript",
         "cd my-react-redux",
         "npm install"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "React",
+      "category": "Frontend",
+      "technology": ["React", "Redux Toolkit", "TypeScript"],
+      "isNew": false
     },
     {
       "name": "VVT",
@@ -151,7 +176,12 @@
         "npm install vuex@next",
         "npm install -D tailwindcss postcss autoprefixer",
         "npx tailwindcss init -p"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Vue",
+      "category": "frontend",
+      "technology": ["Vue", "Vuex", "TailwindCSS"],
+      "isNew": false
     },
     {
       "name": "NTP",
@@ -168,7 +198,12 @@
         "npm install -D tailwindcss postcss autoprefixer",
         "npx tailwindcss init -p",
         "npm install pinia"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Vue",
+      "category": "frontend",
+      "technology": ["Nuxt.js", "TailwindCSS", "Pinia"],
+      "isNew": false
     },
     {
       "name": "STT",
@@ -184,7 +219,12 @@
         "npm install",
         "npm install -D tailwindcss postcss autoprefixer",
         "npx tailwindcss init -p"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Svelte",
+      "category": "frontend",
+      "technology": ["Svelte", "TailwindCSS", "TypeScript"],
+      "isNew": false
     },
     {
       "name": "AN",
@@ -198,7 +238,12 @@
         "ng new my-angular-app --routing --style=css",
         "cd my-angular-app",
         "ng add @ngrx/store"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Angular",
+      "category": "frontend",
+      "technology": ["Angular", "NgRx"],
+      "isNew": false
     },
     {
       "name": "ST",
@@ -211,7 +256,12 @@
         "npm create vite@latest my-solid-app -- --template solid",
         "cd my-solid-app",
         "npm install"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Solid",
+      "category": "frontend",
+      "technology": ["SolidJS", "Vite", "TypeScript"],
+      "isNew": false
     },
     {
       "name": "RPP",
@@ -227,7 +277,12 @@
         "npm install",
         "npm install prisma @prisma/client",
         "npx prisma init"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "React",
+      "category": "fullstack",
+      "technology": ["Remix", "PostgreSQL", "Prisma"],
+      "isNew": false
     },
     {
       "name": "ETTP",
@@ -245,7 +300,12 @@
         "npm install express reflect-metadata typeorm pg",
         "npm install -D typescript ts-node-dev @types/express",
         "npx tsc --init"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "Node.js",
+      "category": "backend",
+      "technology": ["Express", "TypeScript", "TypeORM"],
+      "isNew": false
     },
     {
       "name": "FTPS",
@@ -264,7 +324,12 @@
         "npm install -D typescript ts-node-dev",
         "npx prisma init --datasource-provider sqlite",
         "npx tsc --init"
-      ]
+      ],
+      "database": "SQLite",
+      "ecosystem": "Node.js",
+      "category": "backend",
+      "technology": ["Fastify", "TypeScript", "Prisma"],
+      "isNew": false
     },
     {
       "name": "KMM",
@@ -280,7 +345,12 @@
         "npm init -y",
         "npm install koa koa-router mongoose dotenv",
         "npm install -D nodemon"
-      ]
+      ],
+      "database": "MongoDB",
+      "ecosystem": "Node.js",
+      "category": "backend",
+      "technology": ["Koa", "MongoDB", "Mongoose"],
+      "isNew": false
     },
     {
       "name": "NTP",
@@ -296,7 +366,12 @@
         "cd my-nest-app",
         "npm install typeorm pg",
         "npm install --save @nestjs/typeorm"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "Node.js",
+      "category": "backend",
+      "technology": ["NestJS", "TypeORM", "PostgreSQL"],
+      "isNew": false
     },
     {
       "name": "AdonisJS",
@@ -306,7 +381,12 @@
         "npm init adonis-ts-app@latest my-adonis-app",
         "cd my-adonis-app",
         "npm install"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": "Node.js",
+      "category": "backend",
+      "technology": ["AdonisJS", "TypeScript"],
+      "isNew": false
     },
     {
       "name": "LM",
@@ -319,7 +399,12 @@
         "composer create-project --prefer-dist laravel/laravel my-laravel-app",
         "cd my-laravel-app",
         "php artisan serve"
-      ]
+      ],
+      "database": "MySQL",
+      "ecosystem": "PHP",
+      "category": "fullstack",
+      "technology": ["Laravel", "MySQL"],
+      "isNew": false
     },
     {
       "name": "DP",
@@ -334,7 +419,12 @@
         "pip install django psycopg2-binary",
         "django-admin startproject mydjango",
         "cd mydjango"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "Python",
+      "category": "fullstack",
+      "technology": ["Django", "PostgreSQL"],
+      "isNew": false
     },
     {
       "name": "FSP",
@@ -351,7 +441,12 @@
         "mkdir myflask",
         "cd myflask",
         "echo.>app.py"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "Python",
+      "category": "backend",
+      "technology": ["Flask", "SQLAlchemy", "PostgreSQL"],
+      "isNew": false
     },
     {
       "name": "RP",
@@ -365,7 +460,12 @@
         "rails new my-rails-app -d postgresql",
         "cd my-rails-app",
         "rails db:create"
-      ]
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "Ruby",
+      "category": "fullstack",
+      "technology": ["Ruby on Rails", "PostgreSQL"],
+      "isNew": false
     },
     {
       "name": "ASP.NET API",
@@ -377,7 +477,12 @@
         "dotnet new webapi -o my-dotnet-api",
         "cd my-dotnet-api",
         "dotnet restore"
-      ]
+      ],
+      "database": "None",
+      "ecosystem": ".NET",
+      "category": "backend",
+      "technology": ["ASP.NET Core"],
+      "isNew": false
     }
   ]
 }

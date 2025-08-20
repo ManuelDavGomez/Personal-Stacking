@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getData } from "@/app/lib/githubApi.js";
 import RepoList from "../RepoList";
 
-const Filter = () => {
+const Api = () => {
   const [frameworks, setFrameworks] = useState([]);
   const [reposRecientes, setReposRecientes] = useState([]);
   const [tools, setTools] = useState([]);
@@ -83,4 +83,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default Api;

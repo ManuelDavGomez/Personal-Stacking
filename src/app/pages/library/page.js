@@ -1,12 +1,12 @@
 "use client";
 
-import Filter from "@/app/components/filter/Filter";
+import Api from "@/app/components/apiCall/Api.jsx";
 import PagesLayout from "../../pagesLayout.jsx";
 
 const page = () => {
   return (
     <PagesLayout>
-      <Filter />
+      <Api />
     </PagesLayout>
   );
 };

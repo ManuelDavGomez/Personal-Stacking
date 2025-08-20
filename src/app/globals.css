@@ -7,6 +7,8 @@
   scrollbar-color: #202944 transparent;
 }
 
+
+
 * {
   font-family: "inter", sans-serif;
   box-sizing: border-box;
@@ -153,4 +155,5 @@ input:focus{
 .close-btn:hover {
   background: #666;
 }
+
 
