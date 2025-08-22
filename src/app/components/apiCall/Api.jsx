@@ -54,28 +54,30 @@ const Api = () => {
         <hr className="my-5 overflow-hidden border-[#202944]" />
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">FRAMEWORKS POPULARES</h2>
+          <h2 className="mb-10 text-center">FRAMEWORKS POPULARES</h2>
 
           <RepoList repos={frameworks} />
         </section>
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">PROYECTOS TENDENCIAS DE AGOSTO</h2>
+          <h2 className="mb-10 text-center">PROYECTOS TENDENCIAS DE AGOSTO</h2>
           <RepoList repos={reposRecientes} />
         </section>
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">HERRAMIENTAS DE DESARROLLO WEB POPULARES</h2>
+          <h2 className="mb-10 text-center">
+            HERRAMIENTAS DE DESARROLLO WEB POPULARES
+          </h2>
           <RepoList repos={tools} />
         </section>
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">REPOSITORIOS EDUCATIVOS</h2>
+          <h2 className="mb-10 text-center">REPOSITORIOS EDUCATIVOS</h2>
           <RepoList repos={education} />
         </section>
 
         <section className="flex flex-col items-center justify-center mt-20">
-          <h2 className="mb-10">FRAMEWORKS Y LIBRERIAS CSS</h2>
+          <h2 className="mb-10 text-center">FRAMEWORKS Y LIBRERIAS CSS</h2>
           <RepoList repos={css} />
         </section>
       </section>

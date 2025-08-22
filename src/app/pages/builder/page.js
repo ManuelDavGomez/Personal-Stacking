@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import tech from "@/app/data/TechData.json";
 import Image from "next/image";
 import ModalStack from "../../components/ModalStack.jsx";
 import Filter from "@/app/components/Filter.jsx";
+
+const datas = Array.from({ length: 30 }, (_, i) => ({
+  id: i + 1,
+  nombre: `Item ${i + 1}`,
+}));
 
 export default function Page() {
   const [selectedStack, setSelectedStack] = useState(null);
@@ -14,6 +19,28 @@ export default function Page() {
   const [database, setDatabase] = useState("");
   const [ecosystem, setEcosystem] = useState("");
   const [category, setCategory] = useState("");
+  const [visible, setVisible] = useState(6);
+  const [loading, setLoading] = useState(false);
+
+  const loaderRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !loading) {
+        setLoading(true);
+
+        // Simula retraso de carga (API)
+        setTimeout(() => {
+          setVisible((prev) => prev + 6);
+          setLoading(false);
+        }, 1000);
+      }
+    });
+
+    if (loaderRef.current) observer.observe(loaderRef.current);
+
+    return () => observer.disconnect();
+  }, [loading]);
 
   // Filtrar stacks
   const filteredStacks = tech.stacks.filter((stack) => {
@@ -90,38 +117,49 @@ export default function Page() {
 
           {/* Stacks */}
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-  {filteredStacks.map((stack, idx) => (
-    <li
-      key={idx}
-      className="flex flex-col items-start justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300 cursor-pointer relative"
-      onClick={() => setSelectedStack(stack)}
-    >
-      <div className="flex items-center gap-2 mb-5">
-        {stack.isNew && (
-          <>
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="text-xs font-semibold text-green-500">NUEVO</span>
-          </>
-        )}
-      </div>
+            {filteredStacks.slice(0, visible).map((stack, idx) => (
+              <li
+                key={idx}
+                className="flex flex-col items-start justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300 cursor-pointer relative"
+                onClick={() => setSelectedStack(stack)}
+              >
+                <div className="flex items-center gap-2 mb-5">
+                  {stack.isNew && (
+                    <>
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      <span className="text-xs font-semibold text-green-500">
+                        NUEVO
+                      </span>
+                    </>
+                  )}
+                </div>
 
-      <div className="flex flex-row gap-2 mb-4">
-        {stack.icons.map((url, id) => (
-          <Image
-            key={id}
-            alt="icon"
-            src={url}
-            width={25}
-            height={25}
-          />
-        ))}
-      </div>
-      <h3 className="font-bold">{stack.name}</h3>
-      <p className="mt-2 text-gray-600">{stack.description}</p>
-    </li>
-  ))}
-</ul>
-
+                <div className="flex flex-row gap-2 mb-4">
+                  {stack.icons.map((url, id) => (
+                    <Image
+                      key={id}
+                      alt="icon"
+                      src={url}
+                      width={25}
+                      height={25}
+                    />
+                  ))}
+                </div>
+                <h3 className="font-bold">{stack.name}</h3>
+                <p className="mt-2 text-gray-600">{stack.description}</p>
+              </li>
+            ))}
+          </ul>
+          {visible < filteredStacks.length && (
+            <div
+              ref={loaderRef}
+              className="flex justify-center items-center w-full py-10"
+            >
+              {loading && (
+                <div className="w-8 h-8 border-4 border-[#202944] border-t-transparent rounded-full animate-spin"></div>
+              )}
+            </div>
+          )}
 
           {/* Modal ÚNICO */}
           <ModalStack
