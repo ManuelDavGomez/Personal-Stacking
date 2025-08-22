@@ -2,7 +2,6 @@
 
 [![Next.js](https://img.shields.io/badge/Next.js-13-black?style=flat&logo=next.js)](https://nextjs.org/) 
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?style=flat&logo=tailwindcss)](https://tailwindcss.com/) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) 
 
 **Stacking** es un constructor interactivo de *tech stacks* que te permite explorar, combinar y visualizar diferentes tecnologías de frontend y backend de manera sencilla.  
 El objetivo es facilitar a los desarrolladores la elección de stacks tecnológicos mostrando los comandos necesarios para instalarlos y ejemplos de configuración.
@@ -13,7 +12,6 @@ El objetivo es facilitar a los desarrolladores la elección de stacks tecnológi
 
 - 📚 Catálogo de tecnologías organizadas por categorías (Frontend, Backend, Bases de datos, etc.)
 - 🖼️ Íconos visuales de cada tecnología
-- ⚡ Visualización de stacks completos
 - 💻 Generación de comandos paso a paso para instalar cada stack
 - 🎨 Interfaz moderna con **Next.js + TailwindCSS**
 - 🔍 Fácil de explorar gracias a su diseño con grid y tarjetas interactivas
