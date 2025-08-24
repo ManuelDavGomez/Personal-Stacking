@@ -76,7 +76,7 @@ Puedes usarlo, modificarlo y compartirlo libremente.
 ---
 
 
-### 💡 Inspiración
+## 💡 Inspiración
 La idea nace de la necesidad de probar combinaciones de stacks sin tener que recordar siempre los comandos de instalación.  
 Con **Stacking** puedes visualizarlo de forma clara y rápida, ahorrando tiempo en la configuración inicial de tus proyectos.
 ---
