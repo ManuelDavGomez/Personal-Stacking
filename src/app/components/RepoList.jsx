@@ -85,6 +85,7 @@ export default function RepoList({ repos }) {
                 width={50}
                 height={50}
                 className="rounded-full mb-3"
+                loading="lazy"
               />
               <h3>{repo.name}</h3>
               <p className="mt-3">{repo.description}</p>

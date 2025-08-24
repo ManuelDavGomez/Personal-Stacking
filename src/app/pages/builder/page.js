@@ -89,6 +89,7 @@ export default function Page() {
                       src={url}
                       width={25}
                       height={25}
+                      loading="lazy"
                     />
                   ))}
                 </div>
@@ -117,38 +118,42 @@ export default function Page() {
 
           {/* Stacks */}
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filteredStacks.slice(0, visible).map((stack, idx) => (
-              <li
-                key={idx}
-                className="flex flex-col items-start justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300 cursor-pointer relative"
-                onClick={() => setSelectedStack(stack)}
-              >
-                <div className="flex items-center gap-2 mb-5">
-                  {stack.isNew && (
-                    <>
-                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                      <span className="text-xs font-semibold text-green-500">
-                        NUEVO
-                      </span>
-                    </>
-                  )}
-                </div>
+            {filteredStacks
+              .slice(-visible)
+              .reverse()
+              .map((stack, idx) => (
+                <li
+                  key={idx}
+                  className="flex flex-col items-start justify-start p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-[#08080c73] bg-opacity-10 border border-[#202944] hover:bg-[#1b31573d] hover:bg-opacity-20 transition-all duration-300 cursor-pointer relative"
+                  onClick={() => setSelectedStack(stack)}
+                >
+                  <div className="flex items-center gap-2 mb-5">
+                    {stack.isNew && (
+                      <>
+                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span className="text-xs font-semibold text-green-500">
+                          NUEVO
+                        </span>
+                      </>
+                    )}
+                  </div>
 
-                <div className="flex flex-row gap-2 mb-4">
-                  {stack.icons.map((url, id) => (
-                    <Image
-                      key={id}
-                      alt="icon"
-                      src={url}
-                      width={25}
-                      height={25}
-                    />
-                  ))}
-                </div>
-                <h3 className="font-bold">{stack.name}</h3>
-                <p className="mt-2 text-gray-600">{stack.description}</p>
-              </li>
-            ))}
+                  <div className="flex flex-row gap-2 mb-4">
+                    {stack.icons.map((url, id) => (
+                      <Image
+                        key={id}
+                        alt="icon"
+                        src={url}
+                        width={25}
+                        height={25}
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
+                  <h3 className="font-bold">{stack.name}</h3>
+                  <p className="mt-2 text-gray-600">{stack.description}</p>
+                </li>
+              ))}
           </ul>
           {visible < filteredStacks.length && (
             <div

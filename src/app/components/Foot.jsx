@@ -10,7 +10,12 @@ const Foot = () => {
           <section className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div className="flex justify-center items-center gap-2 text-teal-300 sm:justify-start">
-                <Image className="w-12 h-12" src={Logo} alt="Company Logo" />
+                <Image
+                  className="w-12 h-12"
+                  src={Logo}
+                  alt="Company Logo"
+                  loading="lazy"
+                />
                 <h2 className="bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">
                   Stacking
                 </h2>
@@ -135,7 +140,7 @@ const Foot = () => {
               </p>
 
               <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
-                &copy; 2025 Stacking
+                &copy; {new Date().getFullYear()} Stacking
               </p>
             </div>
           </div>
