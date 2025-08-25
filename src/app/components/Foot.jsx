@@ -30,7 +30,7 @@ const Foot = () => {
               <ul className="flex justify-center gap-6 mt-8 md:gap-8 sm:justify-start">
                 <li>
                   <a
-                    href="/"
+                    href="https://github.com/ManuelDavGomez/Personal-Stacking"
                     rel="noopener noreferrer"
                     target="_blank"
                     className="text-[#0A80F7] transition hover:text-[#1B3157] hover:scale-110"
@@ -55,23 +55,6 @@ const Foot = () => {
 
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
               <div className="text-center sm:text-left">
-                <p className="text-lg font-medium text-white">Sobre Nosotros</p>
-
-                <nav className="mt-8">
-                  <ul className="space-y-4 text-sm">
-                    <li>
-                      <a
-                        className="text-white transition hover:text-white/75"
-                        href="/"
-                      >
-                        Acerca de
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <div className="text-center sm:text-left">
                 <p className="text-lg font-medium text-white">Servicios</p>
 
                 <nav className="mt-8">
@@ -79,7 +62,7 @@ const Foot = () => {
                     <li>
                       <a
                         className="text-white transition hover:text-white/75"
-                        href="/"
+                        href="/pages/builder"
                       >
                         Constructor
                       </a>
@@ -88,7 +71,7 @@ const Foot = () => {
                     <li>
                       <a
                         className="text-white transition hover:text-white/75"
-                        href="/"
+                        href="/pages/library"
                       >
                         Biblioteca
                       </a>

@@ -7,6 +7,18 @@
       "commands": ["https://nodejs.org"]
     },
     {
+      "name": "Angular CLI",
+      "description": "Gestor de paquetes para Angular",
+      "icons": ["https://angular.io/assets/images/logos/angular/angular.svg"],
+      "commands": ["https://angular.dev/tools/cli/setup-local"]
+    },
+    {
+      "name": "Linux",
+      "description": "Sistema operativo de código abierto",
+      "icons": ["https://svgl.app/library/linux.svg"],
+      "commands": ["wsl --install"]
+    },
+    {
       "name": "Composer",
       "description": "Gestor de paquetes para PHP",
       "icons": ["https://getcomposer.org/img/logo-composer-transparent.png"],
@@ -78,7 +90,7 @@
       "ecosystem": "React",
       "category": "Frontend",
       "technology": ["Next.js", "TailwindCSS", "TypeScript"],
-      "isNew": true
+      "isNew": false
     },
     {
       "name": "RTT",
@@ -373,21 +385,7 @@
       "technology": ["NestJS", "TypeORM", "PostgreSQL"],
       "isNew": false
     },
-    {
-      "name": "AdonisJS",
-      "description": "Framework AdonisJS en TypeScript para Node.js",
-      "icons": ["https://avatars.githubusercontent.com/u/13810373?s=200&v=4"],
-      "commands": [
-        "npm init adonis-ts-app@latest my-adonis-app",
-        "cd my-adonis-app",
-        "npm install"
-      ],
-      "database": "None",
-      "ecosystem": "Node.js",
-      "category": "backend",
-      "technology": ["AdonisJS", "TypeScript"],
-      "isNew": false
-    },
+
     {
       "name": "LM",
       "description": "Laravel con base de datos MySQL",
@@ -484,160 +482,140 @@
       "technology": ["ASP.NET Core"],
       "isNew": false
     },
-     {
-    "name": "MEAN",
-    "description": "Stack con Angular en lugar de React",
-    "icons": [
-      "https://svgl.app/library/mongodb.svg",
-      "https://svgl.app/library/expressjs_dark.svg",
-      "https://svgl.app/library/angular.svg",
-      "https://svgl.app/library/nodejs.svg"
-    ],
-    "commands": [
-      "ng new my-app",
-      "cd my-app",
-      "npm install express mongoose cors",
-      "npm start"
-    ],
-    "database": "MongoDB",
-    "ecosystem": "JavaScript",
-    "category": "fullstack",
-    "technology": ["MongoDB", "Express", "Angular", "Node.js"],
-    "isNew": true
-  },
-  {
-    "name": "MEVN",
-    "description": "Stack con Vue.js en lugar de React",
-    "icons": [
-      "https://svgl.app/library/mongodb.svg",
-      "https://svgl.app/library/expressjs_dark.svg",
-      "https://svgl.app/library/vue.svg",
-      "https://svgl.app/library/nodejs.svg"
-    ],
-    "commands": [
-      "npm init vue@latest",
-      "cd my-app",
-      "npm install express mongoose cors",
-      "npm run dev"
-    ],
-    "database": "MongoDB",
-    "ecosystem": "JavaScript",
-    "category": "fullstack",
-    "technology": ["MongoDB", "Express", "Vue.js", "Node.js"],
-    "isNew": true
-  },
-  {
-    "name": "LAMP",
-    "description": "Clásico stack Linux, Apache, MySQL y PHP",
-    "icons": [
-      "https://svgl.app/library/linux.svg",
-      "https://avatars.githubusercontent.com/u/47359?s=200&v=4",
-      "https://svgl.app/library/mysql.svg",
-      "https://svgl.app/library/php_dark.svg"
-    ],
-    "commands": [
-      "sudo apt update",
-      "sudo apt install apache2 mysql-server php libapache2-mod-php"
-    ],
-    "database": "MySQL",
-    "ecosystem": "PHP",
-    "category": "backend",
-    "technology": ["Linux", "Apache", "MySQL", "PHP"],
-    "isNew": true
-  },
-  {
-    "name": "LEMP",
-    "description": "Variante del LAMP con Nginx",
-    "icons": [
-      "https://svgl.app/library/linux.svg",
-      "https://avatars.githubusercontent.com/u/1412239?s=48&v=4",
-      "https://svgl.app/library/mysql.svg",
-      "https://svgl.app/library/php_dark.svg"
-    ],
-    "commands": [
-      "sudo apt update",
-      "sudo apt install nginx mysql-server php-fpm"
-    ],
-    "database": "MySQL",
-    "ecosystem": "PHP",
-    "category": "backend",
-    "technology": ["Linux", "Nginx", "MySQL", "PHP"],
-    "isNew": true
-  },
-  {
-    "name": "JAMstack",
-    "description": "Arquitectura moderna con JavaScript, APIs y Markup",
-    "icons": [
-      "https://svgl.app/library/javascript.svg",
-      "https://avatars.githubusercontent.com/u/51121562?s=48&v=4",
-      "https://svgl.app/library/html5.svg"
-    ],
-    "commands": [
-      "npm init astro",
-      "npm run dev"
-    ],
-    "database": "Headless CMS",
-    "ecosystem": "Web",
-    "category": "frontend",
-    "technology": ["JavaScript", "APIs", "Markup"],
-    "isNew": true
-  },
-  {
-    "name": "Django",
-    "description": "Framework de Python para desarrollo web",
-    "icons": [
-      "https://svgl.app/library/python.svg",
-      "https://svgl.app/library/django.svg",
-      "https://svgl.app/library/postgresql.svg"
-    ],
-    "commands": [
-      "pip install django",
-      "django-admin startproject mysite"
-    ],
-    "database": "PostgreSQL",
-    "ecosystem": "Python",
-    "category": "backend",
-    "technology": ["Python", "Django", "PostgreSQL"],
-    "isNew": true
-  },
-  {
-    "name": "Next.js Full Stack",
-    "description": "Stack moderno con SSR usando Next.js",
-    "icons": [
-      "https://svgl.app/library/nextjs_icon_dark.svg",
-      "https://svgl.app/library/prisma_dark.svg",
-      "https://svgl.app/library/postgresql.svg"
-    ],
-    "commands": [
-      "npx create-next-app@latest my-app",
-      "cd my-app",
-      "npm install @prisma/client",
-      "npx prisma init"
-    ],
-    "database": "PostgreSQL",
-    "ecosystem": "React",
-    "category": "fullstack",
-    "technology": ["Next.js", "Prisma", "PostgreSQL"],
-    "isNew": true
-  },
-  {
-    "name": "Astro Full Stack",
-    "description": "Stack ligero para sitios rápidos con Astro",
-    "icons": [
-      "https://svgl.app/library/astro_dark.svg",
-      "https://svgl.app/library/tailwindcss.svg",
-      "https://svgl.app/library/supabase.svg"
-    ],
-    "commands": [
-      "npm create astro@latest",
-      "cd my-app",
-      "npm install @supabase/supabase-js"
-    ],
-    "database": "Supabase",
-    "ecosystem": "JavaScript",
-    "category": "frontend",
-    "technology": ["Astro", "TailwindCSS", "Supabase"],
-    "isNew": true
-  }
+    {
+      "name": "MEAN",
+      "description": "Stack con Angular en lugar de React",
+      "icons": [
+        "https://svgl.app/library/mongodb.svg",
+        "https://svgl.app/library/expressjs_dark.svg",
+        "https://svgl.app/library/angular.svg",
+        "https://svgl.app/library/nodejs.svg"
+      ],
+      "commands": [
+        "ng new my-app",
+        "cd my-app",
+        "npm install express mongoose cors",
+        "npm start"
+      ],
+      "database": "MongoDB",
+      "ecosystem": "JavaScript",
+      "category": "fullstack",
+      "technology": ["MongoDB", "Express", "Angular", "Node.js"],
+      "isNew": true
+    },
+    {
+      "name": "MEVN",
+      "description": "Stack con Vue.js en lugar de React",
+      "icons": [
+        "https://svgl.app/library/mongodb.svg",
+        "https://svgl.app/library/expressjs_dark.svg",
+        "https://svgl.app/library/vue.svg",
+        "https://svgl.app/library/nodejs.svg"
+      ],
+      "commands": [
+        "npm init vue@latest",
+        "cd my-app",
+        "npm install express mongoose cors",
+        "npm run dev"
+      ],
+      "database": "MongoDB",
+      "ecosystem": "JavaScript",
+      "category": "fullstack",
+      "technology": ["MongoDB", "Express", "Vue.js", "Node.js"],
+      "isNew": true
+    },
+    {
+      "name": "LAMP",
+      "description": "Clásico stack Linux, Apache, MySQL y PHP",
+      "icons": [
+        "https://svgl.app/library/linux.svg",
+        "https://avatars.githubusercontent.com/u/47359?s=200&v=4",
+        "https://svgl.app/library/mysql.svg",
+        "https://svgl.app/library/php_dark.svg"
+      ],
+      "commands": [
+        "sudo apt update",
+        "sudo apt install apache2 mysql-server php libapache2-mod-php"
+      ],
+      "database": "MySQL",
+      "ecosystem": "PHP",
+      "category": "backend",
+      "technology": ["Linux", "Apache", "MySQL", "PHP"],
+      "isNew": true
+    },
+    {
+      "name": "LEMP",
+      "description": "Variante del LAMP con Nginx",
+      "icons": [
+        "https://svgl.app/library/linux.svg",
+        "https://avatars.githubusercontent.com/u/1412239?s=48&v=4",
+        "https://svgl.app/library/mysql.svg",
+        "https://svgl.app/library/php_dark.svg"
+      ],
+      "commands": [
+        "sudo apt update",
+        "sudo apt install nginx mysql-server php-fpm"
+      ],
+      "database": "MySQL",
+      "ecosystem": "PHP",
+      "category": "backend",
+      "technology": ["Linux", "Nginx", "MySQL", "PHP"],
+      "isNew": true
+    },
+    {
+      "name": "JAMstack",
+      "description": "Arquitectura moderna con JavaScript, APIs y Markup",
+      "icons": [
+        "https://svgl.app/library/javascript.svg",
+        "https://avatars.githubusercontent.com/u/51121562?s=48&v=4",
+        "https://svgl.app/library/html5.svg"
+      ],
+      "commands": ["npm init astro", "npm run dev"],
+      "database": "Headless CMS",
+      "ecosystem": "Web",
+      "category": "frontend",
+      "technology": ["JavaScript", "APIs", "Markup"],
+      "isNew": true
+    },
+
+    {
+      "name": "Next.js Full Stack",
+      "description": "Stack moderno con SSR usando Next.js",
+      "icons": [
+        "https://svgl.app/library/nextjs_icon_dark.svg",
+        "https://svgl.app/library/prisma_dark.svg",
+        "https://svgl.app/library/postgresql.svg"
+      ],
+      "commands": [
+        "npx create-next-app@latest my-app",
+        "cd my-app",
+        "npm install @prisma/client",
+        "npx prisma init"
+      ],
+      "database": "PostgreSQL",
+      "ecosystem": "React",
+      "category": "fullstack",
+      "technology": ["Next.js", "Prisma", "PostgreSQL"],
+      "isNew": true
+    },
+    {
+      "name": "Astro Full Stack",
+      "description": "Stack ligero para sitios rápidos con Astro",
+      "icons": [
+        "https://svgl.app/library/astro_dark.svg",
+        "https://svgl.app/library/tailwindcss.svg",
+        "https://svgl.app/library/supabase.svg"
+      ],
+      "commands": [
+        "npm create astro@latest",
+        "cd my-app",
+        "npm install @supabase/supabase-js"
+      ],
+      "database": "Supabase",
+      "ecosystem": "JavaScript",
+      "category": "frontend",
+      "technology": ["Astro", "TailwindCSS", "Supabase"],
+      "isNew": true
+    }
   ]
 }

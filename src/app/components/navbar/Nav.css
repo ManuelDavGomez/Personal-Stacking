@@ -78,7 +78,7 @@
 .wrapper ul{
   position: absolute;
   top: 60%;
-  left: 50%;
+  left: 40%;
   height: 90%;
   transform: translate(-50%, -50%);
   list-style: none;

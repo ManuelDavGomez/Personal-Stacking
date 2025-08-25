@@ -8,22 +8,25 @@ import codeImage from "@/app/assets/carbon.png";
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center h-[100vh] w-full hero_bg text-center">
-        <h1 className="bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent">
+      <section className="flex flex-col items-center justify-center min-h-screen w-full hero_bg text-center px-4 py-12 sm:py-16 md:py-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-tl from-sky-500 to-sky-950 bg-clip-text !text-transparent leading-tight">
           CONSTRUYE TU STACK EN <strong>MINUTOS</strong>
         </h1>
-        <p className="text-center my-5 px-20">
+
+        <p className="text-base sm:text-lg md:text-xl my-5 max-w-2xl mx-auto">
           Con Stacking eliges tecnologías, frameworks y herramientas de forma
-          rápida y visual. <br /> Selecciona tu stack favorito y copia los
-          comandos listos para instalar
+          rápida y visual. Selecciona tu stack favorito y copia los comandos
+          listos para instalar.
         </p>
+
         <a
           href="/pages/builder"
-          className="mx-auto block cursor-pointer px-6 py-2 bg-[#08080c73] border border-[#202944] text-white rounded-lg hover:bg-[#1b31573d] transition-colors duration-300"
+          className="mx-auto block cursor-pointer px-6 py-3 bg-[#08080c73] border border-[#202944] text-white rounded-lg hover:bg-[#1b31573d] transition-colors duration-300"
         >
           Crea tu stack
         </a>
       </section>
+
       <PagesLayout>
         <section className="flex flex-col flex-center items-center gap-10 my-30 mysection md:flex-row">
           <section>
@@ -150,9 +153,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#202944"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
               </svg>
@@ -166,9 +169,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#202944"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -188,9 +191,9 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="#202944"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                 <rect x="9" y="9" width="6" height="6"></rect>

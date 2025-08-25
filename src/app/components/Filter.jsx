@@ -14,7 +14,7 @@ export default function Filter({
   const baseStyle =
     "flex flex-col items-start justify-start p-3 rounded-md bg-[#08080c73] border border-[#202944] transition-all duration-300 w-full text-white";
 
-  const databaseOptions = ["MongoDB", "PostgreSQL", "MySQL", "SQLite"];
+  const databaseOptions = ["MongoDB", "PostgreSQL", "MySQL", "SQLite","Supabase", "Headless CMS"];
   const ecosystemOptions = [
     "React",
     "Vue",
@@ -27,7 +27,7 @@ export default function Filter({
     "Ruby",
     ".NET",
   ];
-  const categoryOptions = ["frontend", "backend", "fullstack"];
+  const categoryOptions = ["Frontend", "Backend", "Fullstack"];
 
   const [dbOpen, setDbOpen] = useState(false);
   const [ecoOpen, setEcoOpen] = useState(false);
