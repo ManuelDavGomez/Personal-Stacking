@@ -22,6 +22,7 @@ El objetivo es facilitar a los desarrolladores la elección de stacks tecnológi
 
 - [Next.js](https://nextjs.org/) – Framework de React para el frontend
 - [TailwindCSS](https://tailwindcss.com/) – Estilos rápidos y modernos
+- [Netlify](https://www.netlify.com/) - Hoisting gratuito
 ---
 
 ## 🚀 Instalación y uso
